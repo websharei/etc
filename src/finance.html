@@ -1,0 +1,1648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0030)http://finance.naver.com/news/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+
+
+	
+	
+		<title>네이버 금융</title> 
+	
+
+
+
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+
+
+	
+		<meta property="og:title" content="네이버 금융">
+		<meta property="og:image" content="http://static.naver.com/m/stock/im/2015/nstock.png"> 
+		<meta property="og:url" content="http://finance.naver.com">
+		<meta property="og:description" content="국내 해외 증시 지수, 시장지표, 펀드, 뉴스, 증권사 리서치 등 제공">
+    
+    
+
+<meta property="og:type" content="article">
+<meta property="og:article:thumbnailUrl" content=""> 
+<meta property="og:article:author" content="네이버금융">
+<meta property="og:article:author:url" content="http://finance.naver.com">
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./finance_files/finance_header.css">
+
+	
+	
+	
+	
+		<link rel="stylesheet" type="text/css" href="./finance_files/newstock.css">
+		<link rel="stylesheet" type="text/css" href="./finance_files/common.css">
+		<link rel="stylesheet" type="text/css" href="./finance_files/layout.css">
+		<link rel="stylesheet" type="text/css" href="./finance_files/main.css">
+		<link rel="stylesheet" type="text/css" href="./finance_files/newstock2.css">
+		<link rel="stylesheet" type="text/css" href="./finance_files/newstock3.css">
+		<link rel="stylesheet" type="text/css" href="./finance_files/world.css">
+		
+		
+		
+			<script type="text/javascript" src="./finance_files/jindo.min.ns.1.5.3.euckr.js"></script>
+			
+			
+				<script type="text/javascript" src="./finance_files/common.js"></script>
+			
+			
+			<script type="text/javascript" src="./finance_files/jindo.Component.1.0.3.js"></script>
+			<script type="text/javascript" src="./finance_files/nhn.autocomplete.stock.js"></script>
+		
+		
+	
+
+<link rel="shortcut icon" href="http://www.naver.com/favicon.ico?20160218162633" type="image/x-icon">
+<style id="gnb_style" type="text/css">@charset "UTF-8";
+/* NTS UIT Development Office YJH 140717 */
+a.gnb_my, .gnb_icon, #gnb .gnb_my_interface, #gnb .gnb_ico_num .gnb_ico_new, #gnb .gnb_ico_num .gnb_ico_new .gnb_count, .gnb_lst .ico_arrow, .gnb_my_li .gnb_my_content .gnb_mask, .gnb_my_li .gnb_my_content .gnb_change, .gnb_my_li .gnb_my_content .gnb_edit_lst li, .gnb_my_li .gnb_my_content .gnb_pay_check em, .gnb_my_lyr, .gnb_my_community a.gnb_pay span, .gnb_notice_li .gnb_notice_lyr, .gnb_notice_li .svc_list a.gnb_list_cover .gnb_ico_mail, .gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_list .gnb_btn_remove i, .gnb_notice_li .gnb_error .gnb_ico_error, .gnb_ly_alert .gnb_btn_close i, .gnb_first_visit, .gnb_favorite_lst .gnb_add a, .gnb_search_box, .gnb_search_box .gnb_del_txt, .gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new, .gnb_svc_more .svc_btnwrp button{background:url(http://static.naver.net/common/gnb/one/sp_gnb_v10.png) no-repeat -999px -999px}
+.gnb_favorite_area, .gnb_search_area, .gnb_banner, .gnb_linkwrp{background:url(http://static.naver.net/common/gnb/2014/bg_svclyr2_v2.png) no-repeat -999px -999px}
+.gnb_my_community a, .gnb_notice_li .gnb_notice_all, a.gnb_service_all, .gnb_svc_more .svc_btns{display:block;height:38px;border-top:1px solid #ebebeb;background-color:#f8f8f8;text-align:center;font-weight:bold;text-decoration:none !important;letter-spacing:-1px;line-height:38px}
+.gnb_my_community a:visited, .gnb_notice_li .gnb_notice_all:visited, a.gnb_service_all:visited, .gnb_svc_more .svc_btns:visited{color:#444}
+.gnb_my_community a:hover, .gnb_notice_li .gnb_notice_all:hover, a.gnb_service_all:hover, .gnb_svc_more .svc_btns:hover{text-decoration:underline !important}
+.gnb_login_li, .gnb_my_li, .gnb_notice_li, .mail_li, .gnb_service_li{float:left;margin-right:2px;overflow:visible}
+.gnb_login_li a, .gnb_my_li a, .gnb_notice_li a, .mail_li a, .gnb_service_li a{position:relative;z-index:100}
+a.gnb_my, .gnb_icon{position:relative;cursor:pointer}
+#gnb{position:relative;left:0;top:0;width:275px;height:32px;z-index:2147483646;font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important;color:#444;font-size:12px;text-align:left;letter-spacing:0 !important;line-height:normal !important;text-align:left !important}
+#gnb div, #gnb p, #gnb span, #gnb em, #gnb strong, #gnb h1, #gnb h2, #gnb h3, #gnb h4, #gnb h5, #gnb h6, #gnb ul, #gnb ol, #gnb li, #gnb dl, #gnb dt, #gnb dd, #gnb table, #gnb th, #gnb td, #gnb form, #gnb fieldset, #gnb legend, #gnb input, #gnb textarea, #gnb button, #gnb label{font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important}
+#gnb a, #gnb label, #gnb button{cursor:pointer}
+#gnb a, #gnb a:visited, #gnb a:active, #gnb a:focus{color:#444}
+#gnb a:hover{color:#444;text-decoration:underline}
+#gnb input::-ms-clear{display:none}
+#gnb input[type=checkbox]{-webkit-appearance:checkbox}
+#gnb em{font-style:normal}
+#gnb ul{list-style:none}
+#gnb .blind{display:block;overflow:hidden;position:absolute;top:-1000em;left:0;width:1px;height:1px;margin:0;padding:0;font-size:0;line-height:0}
+#gnb .gnb_my_interface{padding:5px;position:absolute;top:12px;right:8px;display:block;width:17px;height:16px;background-position:-90px 5px;_width:24px;_height:24px}
+#gnb .gnb_my_interface:hover{background-position:-90px -20px}
+#gnb .gnb_pad_lyr{position:absolute}
+#gnb .gnb_ico_num{display:block;position:absolute;top:1px;width:40px;text-align:center}
+#gnb .gnb_ico_num .gnb_ico_new{height:15px;display:inline-block;background-position:-331px 0;zoom:1}
+#gnb .gnb_ico_num .gnb_ico_new .gnb_count{position:relative;top:0;left:6px;height:15px;margin:0;padding:0 4px 0 1px;display:inline-block;*display:inline;background-position:100% 0;text-indent:-2px;font-family:tahoma !important;font-weight:bold;color:#fff;zoom:1}
+#gnb .gnb_ico_num .gnb_ico_new .plus{display:inline-block;font-size:8px;vertical-align:top;margin:1px -1px 0 2px;color:#fff}
+:root #gnb .gnb_pad_lyr{opacity:1 !important;background:#fff}
+.gnb_lst{zoom:0;float:right;margin:0;padding:0}
+.gnb_lst ul{margin:0;padding:0}
+.gnb_lst:after{display:block;clear:both;content:''}
+.gnb_lst .ico_arrow{display:none;position:absolute;left:50%;top:27px;width:10px;height:8px;margin-left:-5px;background-position:-175px -10px}
+.gnb_lyr_opened .gnb_my_lyr, .gnb_lyr_opened .gnb_service_lyr, .gnb_lyr_opened .gnb_notice_lyr, .gnb_lyr_opened .ico_arrow{display:block !important}
+.gnb_login_li{padding:5px 7px 0 0}
+a.gnb_btn_login, .gnb_bg, .gnb_bdr{display:inline-block;width:44px;height:20px}
+a.gnb_btn_login{position:relative}
+.gnb_bg{background-color:#fff}
+.gnb_bdr{position:absolute;top:0;left:0;width:42px;_width:46px;height:18px;_height:20px;border:1px solid #000;opacity:0.15;filter:alpha(opacity=15)}
+.gnb_txt{position:absolute;top:0;left:0;width:45px;height:20px;line-height:20px;color:#666;text-align:center;text-decoration:none;font-size:12px}
+a.gnb_btn_login:hover{text-decoration:none !important}
+a.gnb_btn_login:hover .gnb_bdr{opacity:0.35;filter:alpha(opacity=35)}
+a.gnb_btn_login:hover, a.gnb_btn_login:visited, a.gnb_btn_login:focus, a.gnb_btn_login:active{text-decoration:none !important}
+.gnb_account a.gnb_btn_login{width:54px;*width:62px;margin:-1px 0 0 3px;vertical-align:top}
+.gnb_account .gnb_bdr{width:52px}
+.gnb_account .gnb_txt{width:48px;left:2px;text-align:center}
+.gnb_my_li{margin-right:7px}
+.gnb_my_namebox{padding:2px 9px 0 0;background-repeat:no-repeat;background-position:100% 50%}
+.gnb_my_namebox a.gnb_emp{display:inline-block;height:28px;line-height:28px;font-size:11px;color:#777 !important;vertical-align:middle}
+a.gnb_my{display:block;font-size:0}
+a.gnb_my .gnb_img_area{position:relative;display:inline-block;*display:inline;vertical-align:top;zoom:1}
+a.gnb_my .gnb_mask{display:block;width:32px;height:32px;background-position:-160px -60px}
+a.gnb_my .gnb_name{margin-right:-1px;padding-left:5px;display:inline-block;height:28px;line-height:28px;vertical-align:top;font-size:11px;color:#444}
+a.gnb_my:hover, a.gnb_my:active, a.gnb_my:visited, a.gnb_my:focus{text-decoration:none !important}
+a.gnb_my:hover .gnb_name{text-decoration:underline}
+a.gnb_my img{vertical-align:top;border-radius:16px}
+a.gnb_my .ico_arrow{top:25px;margin-left:8px}
+.gnb_my_lyr{display:none;position:absolute;top:26px;right:-8px;padding:9px 5px 4px 4px;width:316px;_width:325px;height:172px;_height:189px;background-position:-2px -1310px;z-index:10}
+.gnb_my_lyr.gnb_groupid{height:144px;_height:161px;background-position:-2px -1500px}
+.gnb_my_lyr.gnb_groupid .gnb_my_content{height:80px}
+.gnb_my_lyr.gnb_groupid.gnb_longid1{height:144px;background-position:-2px -1664px}
+.gnb_my_lyr.gnb_groupid.gnb_longid2{height:144px;background-position:-2px -1828px}
+.gnb_my_lyr.gnb_longid1{width:318px;_width:327px;background-position:-2px -1118px}
+.gnb_my_lyr.gnb_longid2{width:348px;_width:357px;background-position:-2px -926px}
+.gnb_my_li .gnb_my_content{zoom:1;height:108px;_height:133px;padding:15px 0 10px 15px}
+.gnb_my_li .gnb_my_content:after{display:block;clear:both;content:''}
+.gnb_my_li .gnb_my_content .gnb_img_area{float:left;position:relative;display:block;width:80px}
+.gnb_my_li .gnb_my_content .gnb_img_area img{vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_mask{position:absolute;top:0;left:0;display:block;width:80px;height:80px;background-position:-70px -60px}
+.gnb_my_li .gnb_my_content .gnb_change{position:absolute;bottom:-2px;left:-1px;display:block;width:28px;height:28px;background-position:-140px 0px}
+.gnb_my_li .gnb_my_content .gnb_change:hover{background-position:-140px -30px}
+.gnb_my_li .gnb_my_content .gnb_txt_area{float:left;width:212px;margin:4px 0 0 9px}
+.gnb_longid1 .gnb_my_content .gnb_txt_area{width:210px}
+.gnb_longid2 .gnb_my_content .gnb_txt_area{width:235px}
+.gnb_my_li .gnb_my_content .gnb_account{margin-bottom:3px;font-size:0}
+.gnb_my_li .gnb_my_content .gnb_name{color:#777;display:inline-block;margin-top:1px;font-size:14px}
+.gnb_my_li .gnb_my_content .gnb_name a{display:inline-block;*display:inline;font-weight:bold;color:#444;zoom:1}
+.gnb_my_li .gnb_my_content a.gnb_mail_address{font-family:tahoma;color:#777 !important;font-size:14px}
+.gnb_my_li .gnb_my_content .gnb_edit_lst{zoom:1;margin-top:10px !important}
+.gnb_my_li .gnb_my_content .gnb_edit_lst:after{display:block;clear:both;content:''}
+.gnb_my_li .gnb_my_content .gnb_edit_lst li{float:left;padding-left:8px;margin-left:8px;background-position:-290px -26px}
+.gnb_my_li .gnb_my_content .gnb_edit_lst li.gnb_info{padding-left:0;margin-left:0;background:none}
+.gnb_my_li .gnb_my_content .gnb_edit_lst a{color:#019a30 !important;text-decoration:underline;letter-spacing:-1px}
+.gnb_my_li .gnb_my_content .gnb_pay_check{height:16px;margin:16px -4px 0 0 !important}
+@media screen and (min-width: 0\0) { .gnb_my_li .gnb_my_content .gnb_pay_check{margin-top:17px} }
+.gnb_my_li .gnb_my_content .gnb_pay_check em{display:inline-block;width:16px;height:16px;background-position:-300px -309px;margin:0 4px 0 0;overflow:hidden;font-size:0;line-height:0;vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_pay_check a{letter-spacing:-1px;line-height:16px;vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_pay_check span{padding-right:5px}
+.gnb_my_li .gnb_my_content .gnb_pay_check strong{font-family:Tahoma,Dotum;letter-spacing:0}
+.gnb_my_li .gnb_my_content .gnb_pay_check a, .gnb_my_li .gnb_my_content .gnb_pay_check span, .gnb_my_li .gnb_my_content .gnb_pay_check strong{font-size:14px;color:#019a30 !important}
+.gnb_my_community{clear:both;zoom:1}
+.gnb_my_community:after{display:block;clear:both;content:''}
+.gnb_my_community a{float:left;position:relative;width:106px;border-right:1px solid #ebebeb}
+.gnb_my_community a.gnb_blog{z-index:110}
+.gnb_my_community a.gnb_pay{width:102px;border-right:0;line-height:0}
+.gnb_my_community a.gnb_pay span{display:inline-block;width:41px;height:16px;background-position:-300px -334px;overflow:hidden;margin:11px auto 0;font-size:0;line-height:999px}
+.gnb_my_community a:active, .gnb_my_community a:focus, .gnb_my_community a:visited{text-decoration:none !important}
+.gnb_my_community a:hover{text-decoration:underline !important}
+.gnb_longid1 .gnb_my_community a{width:105px}
+.gnb_longid1 .gnb_my_community a.gnb_pay{width:106px}
+.gnb_longid2 .gnb_my_community a{width:115px}
+.gnb_longid2 .gnb_my_community a.gnb_pay{width:116px}
+.gnb_notice_li .gnb_notice{padding:7px 9px 4px;display:block;width:15px;height:17px;_width:33px;_height:32px}
+.gnb_notice_li .gnb_notice .gnb_ico_num{left:1px;top:0}
+.gnb_notice_li .gnb_notice .gnb_icon{display:block;width:15px;height:17px;background-position:-3px -60px}
+.gnb_notice_li .gnb_notice:hover .gnb_icon{background-position:-38px -60px}
+.gnb_notice_li .gnb_notice:hover, .gnb_notice_li .gnb_notice:focus, .gnb_notice_li .gnb_notice:active, .gnb_notice_li .gnb_notice:visited{text-decoration:none !important}
+.gnb_notice_li .gnb_notice_lyr{display:none;position:absolute;top:26px;right:-7px;width:297px;_width:305px;height:330px;padding:9px 4px 4px;background-position:-2px -584px;z-index:10}
+.gnb_notice_li .svc_scroll{width:297px;height:291px;overflow:scroll;overflow-x:hidden;position:relative;zoom:1}
+.gnb_notice_li .svc_panel{width:100%;height:330px;overflow:hidden}
+.gnb_notice_li .svc_head{position:relative;height:36px;padding-left:15px;line-height:20px;border-bottom:1px solid #eaeaea;zoom:1}
+.gnb_notice_li .svc_head .gnb_tit{color:#6b6d70;margin-right:1px;line-height:36px}
+.gnb_notice_li .svc_head .task_right{position:absolute;right:8px;top:8px;font-size:12px}
+.gnb_notice_li .svc_head .task_right button{height:20px;padding:0 6px;margin-left:4px;border:1px solid #ddd;color:#888;background-color:#fff;font-family:'나눔고딕',NanumGothic;font-size:12px;letter-spacing:-1px;line-height:18px;*line-height:16px;overflow:visible}
+.gnb_notice_li .svc_list .gnb_btn_remove i, .gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_noti .gnb_ico_mail, .gnb_notice_li .svc_blank .svc_msg_box, .gnb_notice_li .svc_blank .gnb_v_guide{display:inline-block;*display:inline;*zoom:1}
+.gnb_notice_li .svc_list{margin-top:-1px}
+.gnb_notice_li .svc_list li{position:relative;width:248px;_width:297px;padding:7px 34px 7px 15px;border-top:1px solid #eaeaea;line-height:18px;vertical-align:top}
+.gnb_notice_li .svc_list .gnb_new{background:#ffffd8}
+.gnb_notice_li .svc_list .gnb_unread .gnb_subject{color:#444}
+.gnb_notice_li .svc_list .gnb_unread .d_cnt{color:#ff630e}
+.gnb_notice_li .svc_list .gnb_unread a:hover .gnb_subject, .gnb_notice_li .svc_list .gnb_unread .gnb_unread a:hover .d_cnt{color:#390}
+.gnb_notice_li .svc_list .gnb_unread .svc_name{color:#444}
+.gnb_notice_li .svc_list a.gnb_list_cover, .gnb_notice_li .svc_list a.gnb_list_cover:hover, .gnb_notice_li .svc_list a.gnb_list_cover:focus, .gnb_notice_li .svc_list a.gnb_list_cover:active{text-decoration:none !important;display:block;position:relative;zoom:1}
+.gnb_notice_li .svc_list a:hover .gnb_subject{text-decoration:underline}
+.gnb_notice_li .svc_list .gnb_subject{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:248px;color:#adadad}
+.gnb_notice_li .svc_list .d_cnt{font-family:tahoma;font-size:10px}
+.gnb_notice_li .svc_list .gnb_info{color:#adadad}
+.gnb_notice_li .svc_list .svc_name{margin-right:3px;color:#adadad}
+.gnb_notice_li .svc_list .cchr{margin-right:3px}
+.gnb_notice_li .svc_list .dona{position:absolute;top:8px;right:34px;text-decoration:underline}
+.gnb_notice_li .svc_list .dona a{color:#adadad}
+.gnb_notice_li .svc_list .dona a:hover{color:#390}
+.gnb_notice_li .svc_list a.gnb_list_cover .gnb_ico_mail{width:14px;height:15px;font-size:0;line-height:0;color:#fff;vertical-align:top}
+.gnb_notice_li .svc_list a.gnb_list_cover .gnb_ico_mail.gnb_yes{background-position:-245px -17px}
+.gnb_notice_li .svc_list a.gnb_list_cover .gnb_ico_mail.gnb_no{background-position:-245px 4px}
+.gnb_notice_li .svc_list .gnb_btn_remove{position:absolute;right:15px;top:50%;z-index:100;margin-top:-13px;padding:10px;line-height:6px;font-size:0;background:none !important;border:0 !important}
+.gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_list .gnb_btn_remove i{display:block !important;width:7px;height:7px;font-size:0;line-height:0;color:transparent;white-space:nowrap;overflow:hidden;vertical-align:top;background-position:-175px 0}
+.gnb_notice_li .svc_blank{position:absolute;top:124px;left:0;width:100%;white-space:nowrap;height:100px;font-size:0}
+.gnb_notice_li .svc_blank .svc_msg_box{white-space:normal;font-size:12px;text-align:center;width:100%}
+.gnb_notice_li .svc_blank .gnb_tit{display:block;color:#2f3743;font-size:14px;margin:0 0 15px}
+.gnb_notice_li .svc_blank .gnb_tit strong{font-weight:normal;color:#390}
+.gnb_notice_li .svc_blank .gnb_desc{line-height:19px;color:#2f3743;margin-bottom:7px}
+.gnb_notice_li .svc_blank .gnb_desc a, .gnb_notice_li .svc_blank .gnb_link{color:#390;text-decoration:underline}
+.gnb_notice_li .svc_blank .gnb_v_guide{vertical-align:middle;height:100%;width:0}
+.gnb_notice_li .svc_blank .gnb_link_wrap{text-align:center}
+.gnb_notice_li .svc_blank .gnb_link_wrap .gnb_link{display:block;width:40px;margin:0 auto;text-align:center}
+.gnb_notice_li .gnb_error{position:absolute;top:81px;left:2px;width:100%;color:#444;text-align:center}
+.gnb_notice_li .gnb_error .gnb_ico_error{display:inline-block;*display:inline;width:57px;height:57px;background-position:-280px -190px}
+.gnb_notice_li .gnb_error .gnb_tit{font-size:14px;margin:15px 0 11px}
+.gnb_notice_li .gnb_error .gnb_desc{margin-bottom:13px;line-height:18px}
+.gnb_notice_li .gnb_error .gnb_link{text-decoration:underline}
+.gnb_notice_li .svc_loading{background:url(http://img.naver.net/static/www/2014/loading.gif) no-repeat #fff center center;position:absolute;top:33px;left:0;width:100%;height:245px}
+.gnb_notice_li .gnb_notice_all{width:297px}
+.gnb_ly_alert{position:absolute;top:110px;left:13px;background-color:#fff;border:1px solid #b7b9bc;width:257px;padding:34px 0 20px;zoom:1;z-index:100}
+.gnb_ly_alert .gnb_msg{text-align:center;line-height:17px;margin-bottom:14px;color:#2f3743}
+.gnb_.ly_alert .gnb_btn_close{position:absolute;right:2px;top:0;*overflow:visible}
+.gnb_ly_alert .gnb_btns{text-align:center}
+.gnb_ly_alert .gnb_btns button{height:27px;line-height:27px;*line-height:22px;font-weight:bold;font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif;font-size:12px;padding:0 8px;color:#2f3743;border:1px solid #ddd;background-color:white}
+.gnb_ly_alert .gnb_btns button:first-child{margin-right:4px}
+.gnb_ly_alert .gnb_btn_close{position:absolute;right:2px;top:0;border:0;background:none;cursor:pointer;border-radius:0;padding:10px}
+.gnb_ly_alert .gnb_btn_close i{display:block;width:15px;height:15px;font:0/0 a;color:transparent;white-space:nowrap;overflow:hidden;vertical-align:top;background-position:-240px -60px}
+.mail_li .gnb_mail{display:block;padding:7px 9px 6px;width:20px;height:15px;_width:38px;_height:32px}
+.mail_li .gnb_mail .gnb_icon{display:block;width:20px;height:15px;background-position:0px -95px}
+.mail_li .gnb_mail:hover .gnb_icon{background-position:-35px -95px}
+.mail_li .gnb_mail:hover, .mail_li .gnb_mail:focus, .mail_li .gnb_mail:active, .mail_li .gnb_mail:visited{text-decoration:none !important}
+.mail_li .gnb_ico_num{left:6px;top:0}
+.gnb_service_li{margin-right:0}
+.gnb_service_li .gnb_service{display:block;padding:7px 9px 5px;width:16px;height:16px;_width:34px;_height:32px}
+.gnb_service_li .gnb_service .gnb_icon{display:block;width:16px;height:16px;background-position:-2px -130px}
+.gnb_service_li .gnb_service:hover .gnb_icon{background-position:-37px -130px}
+.gnb_service_li .gnb_service_lyr{display:none;position:absolute;top:27px;right:-7px;z-index:10}
+.gnb_favorite_search{width:301px;letter-spacing:-1px}
+.gnb_response .gnb_favorite_search{display:none}
+.gnb_favorite_area{height:93px;padding:8px 4px 0;background-position:0 0}
+.gnb_favorite_lstwrp{position:relative;height:93px;padding:0 1px 0 15px;border-bottom:1px solid #ebebeb}
+.gnb_favorite_lstwrp .gnb_my_interface{top:3px !important;right:3px !important}
+.gnb_first_visit{position:absolute;top:0;left:0;_left:-15px;width:293px;height:92px;background-position:0 -310px;z-index:200}
+.gnb_first_visit .gnb_close{position:absolute;top:0;right:0;display:block;width:32px;height:32px}
+.gnb_favorite_lst{position:absolute;top:22px;left:15px;zoom:1;_margin-bottom:-2px}
+.gnb_favorite_lst:after{display:block;clear:both;content:''}
+.gnb_favorite_lst li{float:left;width:65px;text-align:center;white-space:nowrap}
+.gnb_favorite_lst a{display:inline-block;text-align:center;font-weight:bold}
+.gnb_favorite_lst .gnb_add a{padding-top:40px;display:inline-block;width:36px;height:15px;background-position:-160px -60px}
+.gnb_favorite_lst .gnb_add a:hover{background-position:-200px -60px}
+.gnb_favorite_lst img{display:block;margin:0 auto 6px;vertical-align:top}
+.gnb_search_area{padding:18px 4px 17px;background-position:-301px 0;background-repeat:repeat-y}
+.gnb_search_box{position:relative;z-index:110;margin:0 12px 16px 12px;display:block;width:270px;height:35px;background-position:0px -190px}
+.gnb_search_box.over{background-position:0 -230px}
+.gnb_search_box.fcs{background-position:0 -270px}
+.gnb_search_box.fcs input{font-size:16px;font-weight:bold;color:#444;outline:0}
+.gnb_search_box input{padding:0 0 0 10px;_padding:9px 0 0 0;font-family:'나눔고딕',NamumGothic;letter-spacing:-1px;color:#adadad;font-size:13px;border:0;width:220px;height:34px;_width:210px;background:transparent}
+#inner-editor{width:100px}
+.gnb_search_box .gnb_del_txt{position:absolute;top:8px;right:32px;display:block;width:17px;height:17px;background-position:-190px 0px}
+.gnb_search_box .gnb_del_txt:hover{background-position:-190px -20px}
+.gnb_search_box .gnb_pop_input{position:absolute;top:34px;left:0;z-index:105;width:268px;_width:270px;height:183px;_height:186px;border:1px solid #cbc5c5;border-top:0;background:#fff;overflow-x:hidden;overflow-y:scroll}
+.gnb_search_box .gnb_pop_lst{margin:4px 0 2px;font-size:0}
+.gnb_search_box .gnb_pop_lst a{display:block;padding:6px 0 6px 10px;font-weight:bold;font-size:13px}
+.gnb_search_box .gnb_pop_lst .on{background-color:#f5f5f5}
+.gnb_search_lstwrp{zoom:1;height:118px;padding-left:12px}
+.gnb_search_lstwrp:after{display:block;clear:both;content:''}
+.gnb_search_lstwrp .gnb_search_lst{float:left;width:69px;border-left:1px solid #eaeaea}
+.gnb_search_lstwrp .gnb_search_lst.gnb_first{width:64px;border:0}
+.gnb_search_lstwrp li{padding:12px 0 0 8px}
+.gnb_search_lstwrp li.gnb_first{font-weight:bold;padding-top:0}
+.gnb_search_lstwrp li a{display:inline-block;vertical-align:top}
+.gnb_banner{max-height:47px;margin:0;padding:0 18px;background-position:-301px 0;background-repeat:repeat-y}
+.gnb_banner .gnb_service_event{display:inline-block;border-top:1px solid #ebebeb}
+.gnb_linkwrp{height:40px;padding:0 4px 4px;background-position:-602px 0}
+a.gnb_service_all:visited, a.gnb_service_all:active, a.gnb_service_all:focus{text-decoration:none !important}
+a.gnb_service_all:hover{text-decoration:underline !important}
+.gnb_svc_more{display:none;position:absolute;top:4px;right:303px;width:589px;overflow:hidden;zoom:1;z-index:1000}
+.gnb_svc_more:after{display:block;clear:both;content:''}
+.gnb_response .gnb_svc_more{right:3px}
+:root .gnb_response .gnb_svc_more{right:2px}
+.gnb_bg_top{height:6px;font-size:0;background:url(http://static.naver.net/common/gnb/2014/bg_svclyr1_v2.png) no-repeat}
+.gnb_bg_btm{position:relative;height:6px;font-size:0;background:url(http://static.naver.net/common/gnb/2014/bg_svclyr1_v2.png) no-repeat -1282px 0}
+.gnb_svc_more .gnb_svc_hd{position:relative;padding:0 18px 2px 23px;letter-spacing:-1px;background:url(http://static.naver.net/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0}
+.gnb_svc_more .gnb_svc_hd .gnb_svc_tit{display:block;padding:12px 0 13px;border-bottom:1px solid #ebebeb;font-size:14px;color:#222}
+.gnb_svc_more .gnb_svc_hd .link{position:absolute;top:14px;right:19px;font-size:12px;color:#444}
+.gnb_svc_more .gnb_svc_hd .link a{color:#444 !important;line-height:16px !important}
+.gnb_svc_more .gnb_svc_lstwrp{position:relative;height:273px;padding:15px 0 9px 20px;letter-spacing:-1px;zoom:1;background:url(http://static.naver.net/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0;zoom:1;line-height:11px}
+.gnb_svc_more .gnb_svc_lstwrp:after{display:block;clear:both;content:''}
+.gnb_svc_more .gnb_svc_lstwrp li{height:15px;margin-bottom:5px;color:#6b6d70;white-space:nowrap;line-height:15px}
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event label{color:#444;font-weight:bold}
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new{display:inline-block;width:11px;height:11px;background-position:-215px 0px;margin:2px 0 0 4px;font-size:0;line-height:0;vertical-align:top}
+@media screen and (min-width: 0\0) { .gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic{margin-top:3px} }
+.gnb_svc_more .gnb_svc_lstwrp .gnb_input_check{width:13px;height:13px;margin:2px 3px 0 3px;padding:0;vertical-align:top}
+.gnb_svc_more .gnb_svc_lstwrp label{vertical-align:-1px}
+.gnb_svc_more .gnb_svc_lstwrp .gnb_disabled strong{color:#a8acb0}
+.gnb_svc_more .gnb_svc_lstwrp .gnb_disabled li{color:#cbcbcb}
+.gnb_svc_more .gnb_svc_lst1{display:block;clear:both;float:left;width:328px;height:278px;zoom:1}
+.gnb_svc_more .gnb_svc_lst1 ul{float:left;width:102px;height:260px;*height:270px;padding:5px 0 0 10px;border-left:1px solid #eee}
+.gnb_svc_more .gnb_svc_lst1 ul.gnb_first{padding-left:0;border:0}
+.gnb_svc_more .gnb_svc_lst1 li{width:102px}
+.gnb_svc_more .svc_lst2{float:left;position:relative;width:221px;_width:223px;border:1px solid #eee;background:#fbfbfb;zoom:1}
+.gnb_svc_more .svc_lst2:after{display:block;clear:both;content:''}
+.gnb_svc_more .svc_spc{float:left;position:relative;width:100px;_width:110px;height:254px;*height:264px;padding:9px 0 0 10px}
+.gnb_svc_more .svc_spc.gnb_first{border-right:1px solid #eee}
+.gnb_svc_more .svc_spc strong{height:20px;color:#2f3743;line-height:16px}
+.gnb_svc_more .svc_spc a:visited{color:#2f3743}
+.gnb_svc_more .svc_spc ul{padding:8px 0}
+.gnb_svc_more .svc_spc li{margin-bottom:0;padding-bottom:5px;color:#848689}
+.gnb_svc_more .svc_stroy{width:89px;margin-top:-5px;padding:12px 0 0;border-top:1px solid #eee}
+.gnb_svc_more .svc_btns{position:relative;height:33px;_height:38px;overflow:hidden;padding-top:5px;line-height:normal}
+.gnb_svc_more .svc_btnwrp{position:relative;height:39px;background:url(http://static.naver.net/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0;padding:0 2px 0 4px}
+.gnb_svc_more .svc_btnwrp button{display:inline-block;width:60px;height:25px;border:0;vertical-align:top}
+.gnb_svc_more .svc_btnwrp .gnb_save{background-position:0 -160px}
+.gnb_svc_more .svc_btnwrp .gnb_close{margin-left:1px;background-position:-65px -160px}
+.gnb_svc_more .svc_btnwrp .gnb_return{position:absolute;top:5px;left:15px;background-position:-130px -160px}
+.gnb_type2 .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-155px -120px}
+.gnb_type2 .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-155px -140px}
+.gnb_type2 .gnb_service_li .gnb_service .gnb_icon{background-position:-200px -120px}
+.gnb_type2 .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-200px -140px}
+.gnb_type2 .mail_li a.gnb_mail .gnb_icon{background-position:-175px -120px}
+.gnb_type2 .mail_li a.gnb_mail:hover .gnb_icon{background-position:-175px -140px}
+.gnb_dark .gnb_my_li .gnb_my .gnb_name, .gnb_dark .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+.gnb_dark .gnb_login_li .gnb_btn_login .gnb_bdr{border-color:#fff;opacity:0.1;filter:alpha(opacity=10)}
+.gnb_dark .gnb_login_li .gnb_btn_login .gnb_bg{background:#fff;opacity:0.15;filter:alpha(opacity=15)}
+.gnb_dark .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-3px -1px}
+.gnb_dark .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-33px -1px}
+.gnb_dark .mail_li a.gnb_mail .gnb_icon{background-position:0px -29px}
+.gnb_dark .mail_li a.gnb_mail:hover .gnb_icon{background-position:-30px -29px}
+.gnb_dark .gnb_service_li .gnb_service .gnb_icon{background-position:-60px 0}
+.gnb_dark .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-60px -30px}
+.gnb_dark_type2 .gnb_my_li .gnb_my .gnb_name, .gnb_dark_type2 .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+.gnb_dark_type2 .gnb_login_li .gnb_btn_login .gnb_bdr{border-color:#fff;opacity:0.1;filter:alpha(opacity=10)}
+.gnb_dark_type2 .gnb_login_li .gnb_btn_login .gnb_bg{background:#fff;opacity:0.15;filter:alpha(opacity=15)}
+.gnb_dark_type2 .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-220px -120px}
+.gnb_dark_type2 .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-220px -140px}
+.gnb_dark_type2 .mail_li a.gnb_mail .gnb_icon{background-position:-235px -120px}
+.gnb_dark_type2 .mail_li a.gnb_mail:hover .gnb_icon{background-position:-235px -140px}
+.gnb_dark_type2 .gnb_service_li .gnb_service .gnb_icon{background-position:-260px -120px}
+.gnb_dark_type2 .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-260px -140px}
+#gnb.gnb_one, #gnb.gnb_one_small{width:348px}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+#gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_bdr, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_bdr{border-color:#fff;opacity:0.1;filter:alpha(opacity=10)}
+#gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_bg, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_bg{background:#fff;opacity:0.15;filter:alpha(opacity=15)}
+#gnb.gnb_one .gnb_login_li, #gnb.gnb_one_small .gnb_login_li, #gnb.gnb_one .gnb_my_li, #gnb.gnb_one_small .gnb_my_li, #gnb.gnb_one .gnb_notice_li, #gnb.gnb_one_small .gnb_notice_li, #gnb.gnb_one .mail_li, #gnb.gnb_one_small .mail_li, #gnb.gnb_one .gnb_service_li, #gnb.gnb_one_small .gnb_service_li{border-right:1px solid #00af35;border-color:rgba(0, 0, 0, 0.12)}
+#gnb.gnb_one .gnb_my_li, #gnb.gnb_one_small .gnb_my_li{margin-right:2px}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name{margin:0 0 0 4px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice{width:17px;height:19px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice .gnb_icon, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice .gnb_icon{width:17px;height:19px;background-position:-284px -119px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice:hover .gnb_icon, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-284px -119px}
+#gnb.gnb_one .mail_li a.gnb_mail, #gnb.gnb_one_small .mail_li a.gnb_mail{width:21px;height:17px}
+#gnb.gnb_one .mail_li a.gnb_mail .gnb_icon, #gnb.gnb_one_small .mail_li a.gnb_mail .gnb_icon{width:21px;height:17px;background-position:-302px -120px}
+#gnb.gnb_one .mail_li a.gnb_mail:hover .gnb_icon, #gnb.gnb_one_small .mail_li a.gnb_mail:hover .gnb_icon{background-position:-302px -120px}
+#gnb.gnb_one .gnb_service_li .gnb_service, #gnb.gnb_one_small .gnb_service_li .gnb_service{width:17px;height:17px}
+#gnb.gnb_one .gnb_service_li .gnb_service .gnb_icon, #gnb.gnb_one_small .gnb_service_li .gnb_service .gnb_icon{width:17px;height:17px;background-position:-324px -120px}
+#gnb.gnb_one .gnb_service_li .gnb_service:hover .gnb_icon, #gnb.gnb_one_small .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-324px -120px}
+#gnb.gnb_one .gnb_ico_num, #gnb.gnb_one_small .gnb_ico_num{width:34px;top:10px;left:auto;right:3px;vertical-align:top}
+#gnb.gnb_one .gnb_ico_num .gnb_ico_new, #gnb.gnb_one_small .gnb_ico_num .gnb_ico_new{vertical-align:top}
+#gnb.gnb_one .gnb_ico_num .plus, #gnb.gnb_one_small .gnb_ico_num .plus{margin:2px -1px 0 2px}
+#gnb.gnb_one{height:54px}
+#gnb.gnb_one .ico_arrow{top:39px}
+#gnb.gnb_one .gnb_my_lyr, #gnb.gnb_one .gnb_notice_lyr{top:38px}
+#gnb.gnb_one .gnb_service_lyr{top:39px}
+#gnb.gnb_one .gnb_login_li{padding:18px 20px 13px 0}
+#gnb.gnb_one .gnb_my_li{padding:12px 20px 12px 0}
+#gnb.gnb_one .gnb_my_li .ico_arrow{top:25px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice{padding:18px 19px 17px 17px}
+#gnb.gnb_one .mail_li a.gnb_mail{padding:19px 17px 18px 15px}
+#gnb.gnb_one .gnb_service_li .gnb_service{padding:19px 19px 18px 17px}
+#gnb.gnb_one .gnb_ico_num .gnb_ico_new{height:17px;margin-left:-5px;background-position:-329px -60px}
+#gnb.gnb_one .gnb_ico_num .gnb_ico_new .gnb_count{height:16px;padding:1px 5px 0 2px;background-position:100% -60px}
+#gnb.gnb_one_small{height:39px}
+#gnb.gnb_one_small .ico_arrow{top:31px}
+#gnb.gnb_one_small .gnb_my_lyr, #gnb.gnb_one_small .gnb_notice_lyr{top:30px}
+#gnb.gnb_one_small .gnb_service_lyr{top:31px}
+#gnb.gnb_one_small .gnb_login_li{padding:10px 12px 6px 0}
+#gnb.gnb_one_small .gnb_my_li{padding:5px 20px 4px 0}
+#gnb.gnb_one_small .gnb_my_li .ico_arrow{top:25px}
+#gnb.gnb_one_small .gnb_notice_li a.gnb_notice{padding:10px 11px 10px 10px}
+#gnb.gnb_one_small .mail_li a.gnb_mail{padding:11px 10px 11px 7px}
+#gnb.gnb_one_small .gnb_service_li .gnb_service{padding:11px 12px 11px 9px}
+#gnb.gnb_one_small .gnb_ico_num{top:5px;right:6px;width:24px}
+#gnb.gnb_one_small .gnb_ico_num .gnb_ico_new{height:13px;background-position:-334px -80px}
+#gnb.gnb_one_small .gnb_ico_num .gnb_ico_new .gnb_count{height:13px;margin-top:-1px;padding:1px 4px 0 1px;background-position:100% -79px;font-size:10px;vertical-align:top}
+#gnb.gnb_one_small .gnb_ico_num .gnb_ico_new .plus{margin:2px 0 0 3px;font-size:7px}
+@media screen and (-webkit-min-device-pixel-ratio: 0) { #gnb.gnb_one .gnb_ico_num .gnb_ico_new .plus{margin-top:1px}
+  #gnb.gnb_one_small .gnb_ico_num .gnb_ico_new .plus{margin-top:0} }
+@supports (-moz-appearance: none) and (display: contents) { #gnb.gnb_one .gnb_ico_num .gnb_ico_new .gnb_count{padding-top:0} }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script src="./finance_files/clickcrD.js" id="gnb_clickcrD" charset="euc-kr"></script></head>
+
+
+
+
+<body onload="getGNB();">
+
+
+
+<script type="text/javascript">
+	document.domain = 'naver.com';
+	var nclk_evt = 3;
+	nclk_do();
+</script>
+	
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+var nsc="finance.news";
+
+
+var ccsrv="cc.naver.com";
+
+
+	
+	
+	
+	var gnb_service='finance';
+	
+
+
+var gnb_logout=document.URL; //GNB에서 로그아웃 후 redirect 될 URL
+var gnb_template='gnb_common_euckr_quirk'; //사용하고 있는 템플릿 명
+var gnb_searchbox='off'; //미니 검색창을 on 할지 off 할지. default는 off
+var gnb_shortnick='off'; //닉네임 말줄임(10자)을 on할지 off 할지. default는 off.
+
+var gnb_naverme_layer_open_callback = function(){
+	   var naverLayerSize = gnbNaverMeLayer.getLayerSize();
+		
+		var me_layers = document.getElementById("me_layers"); 
+		me_layers.width=naverLayerSize.width;
+		me_layers.height=naverLayerSize.height;}; 
+
+var gnb_naverme_layer_close_callback = function(){
+		 
+			var me_layers = document.getElementById("me_layers"); 
+			me_layers.width="0";
+			me_layers.height="0";}; 
+</script>
+<div id="wrap">
+
+
+	
+	
+		<div class="blind"><a href="http://finance.naver.com/news/#start">메뉴건너뛰고 본문 바로가기</a></div> 
+	
+
+
+
+<div id="header">
+	<div id="gnb_area">
+		<div id="gnb" class=""><strong class="blind">사용자 링크</strong><ul class="gnb_lst" id="gnb_lst" style="display: block;"><li class="gnb_login_li" id="gnb_login_layer" style="display: inline-block;"><a class="gnb_btn_login" href="https://nid.naver.com/nidlogin.login" id="gnb_login_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span class="gnb_txt">로그인</span></a></li><li class="gnb_my_li" id="gnb_my_layer" style="display:none"><div class="gnb_my_namebox" id="gnb_my_namebox" style="background-image: url(&quot;http://static.naver.net/common/gnb/2014/ico_arrow_bl1.gif&quot;);"><a href="javascript:;" class="gnb_my" onclick="gnbUserLayer.clickToggle(); return false;"><img id="gnb_profile_img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" width="26" height="26" alt=""> <span class="gnb_name" id="gnb_name1"></span><em class="blind">내정보 보기</em><span class="ico_arrow"></span></a><a href="http://finance.naver.com/news/#" class="gnb_emp" id="gnb_emp">(임직원혜택)</a></div><div class="gnb_my_lyr" id="gnb_my_lyr"><div class="gnb_my_content"><div class="gnb_img_area"><span class="gnb_mask"></span><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" width="80" height="80" alt=""><a href="http://me.naver.com/profile.nhn" class="gnb_change"><span class="blind">프로필 사진 변경</span></a></div><div class="gnb_txt_area"><p class="gnb_account"><span class="gnb_name" id="gnb_name2"><a class="gnb_nick" href="http://me.naver.com/profile.nhn"></a>님</span><a class="gnb_btn_login" href="https://nid.naver.com/nidlogin.logout?returl=http%3A%2F%2Ffinance.naver.com%2Fnews%2F" id="gnb_logout_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span class="gnb_txt">로그아웃</span></a></p><a href="http://mail.naver.com/" class="gnb_mail_address">@naver.com</a><ul class="gnb_edit_lst"><li class="gnb_info"><a href="https://nid.naver.com/user2/help/myInfo.nhn?menu=home">내정보</a></li><li class="gnb_secure" id="gnb_secure_lnk"><a href="https://nid.naver.com/user2/help/myInfo.nhn?m=viewSecurity&amp;menu=security">보안설정</a></li></ul><p class="gnb_pay_check" id="gnb_pay_check"><em>N Pay</em><a href="http://pay.naver.com/" id="gnb_pay_point"><span>내 페이포인트</span></a></p></div></div><div class="gnb_my_community"><a href="http://blog.naver.com/MyBlog.nhn" class="gnb_blog">내 블로그</a><a href="http://section.cafe.naver.com/" class="gnb_cafe">가입한 카페</a><a href="http://pay.naver.com/" class="gnb_pay"><span>N Pay</span></a></div><a href="http://finance.naver.com/news/#" class="gnb_my_interface" style="display:none"><span class="blind">환경설정</span></a></div><iframe id="gnb_my_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="top:34px;right:-4px;width:318px;height:174px;display:none;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li><li class="gnb_notice_li" id="gnb_notice_layer" style="display:none"><a href="javascript:;" class="gnb_notice" onclick="gnbNaverMeLayer.clickToggle(); return false;"><span class="blind">알림</span><span class="gnb_icon"></span><em class="gnb_ico_num" id="gnb_me_menu" style="display:none"><span class="gnb_ico_new"><span class="gnb_count" id="gnb_me_count"></span></span></em><span class="ico_arrow"></span></a><div class="gnb_notice_lyr" id="gnb_notice_lyr"><div class="svc_noti svc_panel"><div class="svc_scroll"><div class="svc_head"><strong class="gnb_tit">전체 알림</strong><div class="task_right"><button onclick="gnbNaverMeLayer.deleteReadList(this, event);" id="gnb_btn_read_noti_del">읽은 알림 삭제</button><button onclick="gnbNaverMeLayer.showDeleteAlert();" id="gnb_btn_all_noti_del">모두 삭제</button></div></div><div class="svc_body" id="gnb_naverme_layer"></div></div><div class="gnb_ly_alert" id="gnb_ly_alert" style="display: none;"><p class="gnb_msg"><strong>알림을 모두 삭제하시겠습니까?</strong></p><div class="gnb_btns"><button id="ly_alert_confirm" onclick="gnbNaverMeLayer.deleteAllList(this, event);">확인</button><button onclick="gnbNaverMeLayer.hideDeleteAlert();">취소</button></div><button class="gnb_btn_close" onclick="gnbNaverMeLayer.hideDeleteAlert();"><i>레이어 닫기</i></button></div><a href="http://me.naver.com/box/noti.nhn" class="gnb_notice_all">내 알림 전체보기</a></div></div><iframe id="gnb_notice_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="top:34px;right:-4px;width:299px;height:332px;display:none;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li><li class="mail_li" id="gnb_mail_layer" style="display:none"><a href="http://mail.naver.com/" class="gnb_mail"><span class="blind">메일</span><span class="gnb_icon"></span><em class="gnb_ico_num" id="gnb_mail_menu" style="display:none"><span class="gnb_ico_new"><span class="gnb_count" id="gnb_mail_count"></span></span></em></a></li><li class="gnb_service_li" id="gnb_service_layer" style="display: inline-block;"><a href="javascript:;" class="gnb_service" onclick="gnbMoreLayer.clickToggle(); return false;"><span class="blind">서비스 더보기</span><span class="gnb_icon"></span><span class="ico_arrow"></span></a><div class="gnb_service_lyr" id="gnb_service_lyr"><div class="gnb_favorite_search" id="gnb_favorite_search"><div class="gnb_favorite_area"><div class="gnb_favorite_lstwrp"><div class="gnb_first_visit" style="display:none"><span class="blind">나만의 즐겨찾기를 추가해 보세요!</span><a href="http://finance.naver.com/news/#" class="gnb_close"><span class="blind">닫기</span></a></div><strong class="blind">즐겨찾는 서비스</strong><ul class="gnb_favorite_lst" id="gnb_favorite_lst"><li class="gnb_add"><a href="http://finance.naver.com/news/#">추가</a></li><li class="gnb_add"><a href="http://finance.naver.com/news/#">추가</a></li><li class="gnb_add"><a href="http://finance.naver.com/news/#">추가</a></li><li class="gnb_add"><a href="http://finance.naver.com/news/#">추가</a></li></ul><a href="http://finance.naver.com/news/#" class="gnb_my_interface" onclick="gnbMoreLayer.clickToggleWhole(); return false;"><span class="blind">즐겨찾기 설정</span></a></div></div><div class="gnb_search_area"><div class="gnb_search_box" onmouseover="gnb_search.mouseOver(this);" onmouseout="gnb_search.mouseOut(this);"><input id="gnb_svc_search_input" type="text" title="서비스 검색" value="더 많은 서비스를 간편하게 시작하세요!" onfocus="gnb_search.clearInput(this);" onblur="gnb_search.resetInput(this);" onkeydown="gnb_search.keyDown(event);" onkeyup="gnb_search.keyUp(event);"><a href="http://finance.naver.com/news/#" class="gnb_del_txt" id="gnb_del_txt" style="display:none"><span class="blind">삭제</span></a><div class="gnb_pop_input" id="gnb_pop_input" onmouseover="gnb_search.searchPopOnMouse = true; return false;" onmouseout="gnb_search.searchPopOnMouse = false; return false;" style="display:none"><ul class="gnb_pop_lst"></ul></div></div><div class="gnb_search_lstwrp"><ul class="gnb_search_lst gnb_first"><li class="gnb_first"><a href="http://cafe.naver.com/">카페</a></li><li><a href="http://news.naver.com/">뉴스</a></li><li><a href="http://map.naver.com/">지도</a></li><li><a href="http://sports.news.naver.com/">스포츠</a></li><li><a href="http://game.naver.com/">게임</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://section.blog.naver.com/">블로그</a></li><li><a href="http://post.naver.com/main.nhn">포스트</a></li><li><a href="http://dic.naver.com/">사전</a></li><li><a href="http://kin.naver.com/">지식iN</a></li><li><a href="http://weather.naver.com/">날씨</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://mail.naver.com/">메일</a></li><li><a href="http://stock.naver.com/">증권</a></li><li><a href="http://land.naver.com/">부동산</a></li><li><a href="http://music.naver.com/">뮤직</a></li><li><a href="http://book.naver.com/">책</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://shopping.naver.com/">쇼핑</a></li><li><a href="http://comic.naver.com/">웹툰</a></li><li><a href="http://movie.naver.com/">영화</a></li><li><a href="http://cloud.naver.com/">클라우드</a></li><li><a href="http://auto.naver.com/">자동차</a></li></ul></div></div><div class="gnb_banner"><a href="http://campaign.naver.com/pointevent/" class="gnb_service_event"><img id="gnb_promo" alt="네이버페이 | 2월 이벤트" width="265" height="47" src="./finance_files/promo_npay_1602.png"></a></div><div class="gnb_linkwrp"><a href="http://www.naver.com/more.html" class="gnb_service_all" id="gnb_service_all">전체 서비스 보기</a></div></div><div class="gnb_svc_more" id="gnb_svc_more" style=""><strong class="blind">네이버 주요 서비스</strong><div class="gnb_bg_top"></div><div class="gnb_svc_hd"><strong class="gnb_svc_tit">바로가기 설정</strong><span class="link"><a href="http://www.naver.com/more.html">전체 서비스 보기</a></span></div><div class="gnb_svc_lstwrp"><div class="gnb_svc_lst1"><ul class="gnb_first"><li><input type="checkbox" id="nsvc_game" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_game">게임</label></li><li><input type="checkbox" id="nsvc_weather" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_weather">날씨</label></li><li><input type="checkbox" id="nsvc_shopping" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_shopping">네이버쇼핑</label></li><li><input type="checkbox" id="nsvc_navercast" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_navercast">네이버캐스트</label></li><li><input type="checkbox" id="nsvc_cloud" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cloud">네이버클라우드</label></li><li class="gnb_event"><input type="checkbox" id="nsvc_naverpay" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_naverpay">네이버페이</label><em class="ic_gnb_new">New</em></li><li><input type="checkbox" id="nsvc_news" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_news">뉴스</label></li><li><input type="checkbox" id="nsvc_comic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_comic">만화/웹툰</label></li><li><input type="checkbox" id="nsvc_memo" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_memo">메모</label></li><li><input type="checkbox" id="nsvc_mail" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_mail">메일</label></li><li><input type="checkbox" id="nsvc_music" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_music">뮤직</label></li><li><input type="checkbox" id="nsvc_land" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_land">부동산</label></li><li><input type="checkbox" id="nsvc_bookmark" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_bookmark">북마크</label></li></ul><ul class=""><li><input type="checkbox" id="nsvc_blog" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_blog">블로그</label></li><li><input type="checkbox" id="nsvc_dic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_dic">사전</label></li><li><input type="checkbox" id="nsvc_software" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_software">소프트웨어</label></li><li><input type="checkbox" id="nsvc_sports" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_sports">스포츠</label></li><li><input type="checkbox" id="nsvc_ya9" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_ya9">야구9단</label></li><li><input type="checkbox" id="nsvc_movie" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_movie">영화</label></li><li><input type="checkbox" id="nsvc_office" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_office">오피스</label></li><li><input type="checkbox" id="nsvc_novel" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_novel">웹소설</label></li><li><input type="checkbox" id="nsvc_auto" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_auto">자동차</label></li><li><input type="checkbox" id="nsvc_contact" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_contact">주소록</label></li><li><input type="checkbox" id="nsvc_finance" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_finance">증권(금융)</label></li><li><input type="checkbox" id="nsvc_map" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_map">지도</label></li><li><input type="checkbox" id="nsvc_kin" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_kin">지식iN</label></li></ul><ul class=""><li><input type="checkbox" id="nsvc_terms" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_terms">지식백과</label></li><li><input type="checkbox" id="nsvc_book" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_book">책</label></li><li><input type="checkbox" id="nsvc_cafe" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cafe">카페</label></li><li><input type="checkbox" id="nsvc_calendar" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_calendar">캘린더</label></li><li><input type="checkbox" id="nsvc_photo" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_photo">포토갤러리</label></li><li><input type="checkbox" id="nsvc_nstore" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_nstore">N스토어</label></li><li><input type="checkbox" id="nsvc_tvcast" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_tvcast">TV캐스트</label></li><li><input type="checkbox" id="nsvc_tvguide" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_tvguide">TV편성표</label></li></ul></div><div class="svc_lst2"><div class="svc_spc gnb_first"><strong><a href="http://dic.naver.com/">어학사전</a></strong><ul class=""><li><input type="checkbox" id="nsvc_krdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_krdic">국어사전</label></li><li><input type="checkbox" id="nsvc_endic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_endic">영어/영영사전</label></li><li><input type="checkbox" id="nsvc_hanja" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_hanja">한자사전</label></li><li><input type="checkbox" id="nsvc_jpdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_jpdic">일어사전</label></li><li><input type="checkbox" id="nsvc_cndic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cndic">중국어사전</label></li><li><input type="checkbox" id="nsvc_frdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_frdic">프랑스어사전</label></li><li><input type="checkbox" id="nsvc_dedic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_dedic">독일어사전</label></li><li><input type="checkbox" id="nsvc_rudic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_rudic">러시아어사전</label></li><li><input type="checkbox" id="nsvc_vndic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_vndic">베트남어사전</label></li><li><input type="checkbox" id="nsvc_spdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_spdic">스페인어사전</label></li><li><input type="checkbox" id="nsvc_translate" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_translate">번역기</label></li></ul></div><div class="svc_spc"><strong>인기/신규서비스</strong><ul class=""><li><input type="checkbox" id="nsvc_grafolio" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_grafolio">그라폴리오</label></li><li><input type="checkbox" id="nsvc_post" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_post">포스트</label></li><li><input type="checkbox" id="nsvc_luncherapp" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_luncherapp">도돌런처</label></li><li><input type="checkbox" id="nsvc_band" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_band">밴드</label></li><li><input type="checkbox" id="nsvc_line" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_line">라인</label></li></ul></div></div></div><div class="svc_btnwrp"><div class="svc_btns"><button class="gnb_save" onclick="if(gnbFavorite.addService()){gnbMoreLayer.clickToggleWhole()} return false;"><strong class="blind">확인</strong></button><button class="gnb_close" onclick="gnbFavorite.cancle(); return false;"><span class="blind">취소</span></button><button class="gnb_return" onclick="gnbFavorite.resetService(); return false;"><span class="blind">초기 설정으로 변경</span></button></div></div><div class="gnb_bg_btm"></div></div></div><iframe id="gnb_service_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="display:none;top:34px;right:297px;width:585px;height:385px;opacity:0;-ms-filter:alpha(opacity=0)"></iframe><iframe id="gnb_svc_more_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="display:none;top:34px;right:-4px;width:295px;height:385px;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li></ul>			
+		</div>
+	</div>	 
+	 
+	<div class="sta">
+		<h1> <a href="http://www.naver.com/" onclick="clickcr(this, &#39;STA.naver&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/bi_naver.gif" width="85" height="25" alt="NAVER"></a>  
+		<a href="http://finance.naver.com/" class="service" onclick="clickcr(this, &#39;STA.finance&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/finance.gif" width="45" height="25" alt="금융"></a> </h1>
+		<form name="search" action="http://finance.naver.com/search/search.nhn" method="get" onsubmit="return delayed_submit(this)" style="margin:0; padding:0;">
+		<fieldset>
+		<legend>검색</legend>
+			<div class="snb_search_box">
+				<div class="snb_search_box_sub">
+					<input id="stock_items" type="text" title="검색" name="query" value="종목명·펀드명·환율명·원자재명 입력" accesskey="s" class="snb_search_text snb_default" autocomplete="off">					
+					<a id="nautocomplete" href="http://finance.naver.com/news/#" onclick="return false" class="btn_arrow">
+						<img class="triangleImg" src="./finance_files/bu_arrow_down.gif" width="21" height="19" title="자동완성 펼치기" alt="자동완성 펼치기">
+					</a>
+				</div>
+				<input src="./finance_files/btn_srch_v2.gif" onclick="clickcr(this, &#39;STA.search&#39;, &#39;&#39;, &#39;&#39;, event);" alt="검색" type="image" class="btn_search">
+				<a href="http://finance.naver.com/news/#" target="_blank" class="btn_search" onclick="itegrationSearch();clickcr(this, &#39;STA.nx&#39;, &#39;&#39;, &#39;&#39;, event);return false;"><img src="./finance_files/btn_union_srch_v2.gif" width="55" height="25" alt="통합검색"></a>
+				<div class="auto_area">
+					<iframe id="autoFrame" src="./finance_files/reatcmp.html" scrolling="no" height="0" frameborder="0" width="400" style="display: none;" marginheight="0" marginwidth="0" title="자동완성"></iframe>
+				</div>
+			</div>
+		</fieldset>
+		</form>				
+	</div>
+	
+	<div id="menu">
+		<ul class="menu">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li class="first "><a href="http://finance.naver.com/" onclick="clickcr(this, &#39;LNB.home&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu1.gif" width="71" height="38" alt="금융 홈"></a></li>
+			<li><a href="http://finance.naver.com/sise/" onclick="clickcr(this, &#39;LNB.sise&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu2.gif" width="73" height="38" alt="국내증시"></a></li>
+			<li><a href="http://finance.naver.com/world/" onclick="clickcr(this, &#39;LNB.world&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu3.gif" width="73" height="38" alt="해외증시"></a></li>
+			<li><a href="http://info.finance.naver.com/marketindex/" onclick="clickcr(this, &#39;LNB.market&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu4.gif" width="74" height="38" alt="시장지표"></a>
+			</li>
+			<li><a href="http://info.finance.naver.com/fund/" onclick="clickcr(this, &#39;LNB.fund&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu5.gif" width="52" height="38" alt="펀드"></a>
+			
+			</li>
+			<li><a href="http://finance.naver.com/research/" onclick="clickcr(this, &#39;LNB.research&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu6.gif" width="75" height="38" alt="투자전략"></a></li>
+			<li class="on"><a href="http://finance.naver.com/news/" onclick="clickcr(this, &#39;LNB.news&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu7_on_1.gif" width="56" height="38" alt="뉴스"></a></li>
+			<li><a href="http://finance.naver.com/mystock/" onclick="clickcr(this, &#39;LNB.mystock&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu8.gif" width="75" height="38" alt="MY금융"></a></li>
+			<li><a href="http://finance.naver.com/recommendationItem" onclick="clickcr(this, &#39;LNB.rec&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu13.gif" width="76" height="38" alt="추천종목"></a></li>
+		</ul>
+				
+		<ul class="etc">
+			<li><a href="http://moneybook.naver.com/" onclick="clickcr(this, &#39;LNB.moneybook&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu_etc1.gif" width="52" height="26" alt="가계부"></a></li>
+			<li><a href="http://land.naver.com/" onclick="clickcr(this, &#39;LNB.land&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/menu_etc4.gif" width="52" height="26" alt="부동산"></a></li>
+		</ul>
+	</div>
+	<div id="search">
+	
+		<div class="debate">
+		<ul>
+			
+			
+				
+					
+						
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008208048&amp;office_id=001&amp;mode=mainnews&amp;type=&amp;date=2016-02-24&amp;page=1" onclick="clickcr(this, &#39;rec.con1&#39;, &#39;&#39;, &#39;&#39;, event);">ISA '묻지마 판매' 어떻길래…당국 '경고음' </a></li>
+						
+					
+				
+			
+			
+			
+				
+					
+						
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003635873&amp;office_id=008&amp;mode=mainnews&amp;type=&amp;date=2016-02-24&amp;page=1" onclick="clickcr(this, &#39;rec.con2&#39;, &#39;&#39;, &#39;&#39;, event);">'저금리+배당수익률'에 연초에도 빛나는 '고배당주' </a></li>
+						
+					
+				
+			
+			
+			
+				
+					
+						
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003635723&amp;office_id=008&amp;mode=mainnews&amp;type=&amp;date=2016-02-24&amp;page=2" onclick="clickcr(this, &#39;rec.con3&#39;, &#39;&#39;, &#39;&#39;, event);">파생상품 판매 늘어나는데 교육기관은 한 곳뿐</a></li>
+						
+					
+				
+			
+			
+		</ul>
+		</div>
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/JavaScript">
+		/* lcs 집계 */ 
+		lcs_do();
+		
+		/* 검색 자동완성 [ 인자1 : 검색input의 ID, 인자2 : iframe 태그 ID ]   */
+		// AutoComplete 생성
+		smartSearch = new nhn.Autocomplete(
+			// InputManager 생성
+			new nhn.AcInputManager(jindo.$("stock_items")),
+			// DataManager 생성
+			new nhn.AcDataManager("http://ac.finance.naver.com:11002/ac", "jsonp", "get", { 
+                    st: "111", 
+                    r_lt : "111", 
+                    q_enc : "euc-kr", 
+                    r_enc : "euc-kr", 
+                    frm: "stock"}), 
+			// ViewManager 생성
+			new nhn.AcStockViewManager(jindo.$("autoFrame"), jindo.$("nautocomplete"), {  
+                                        strMax: 200, 
+                                        listMax: [7, 2, 2], 
+                                        aRedirectUrl : [
+                            			"http://finance.naver.com",
+                            			"http://info.finance.naver.com",
+                            			"http://info.finance.naver.com"]}),
+			// Autocomplete Option 
+            {formId:"search", cookieDomain:"finance.naver.com", cookieName:"NaverCommonStock"});
+		
+			smartSearch.attach({ 
+	            onFocus: function () { 
+	                var weInput = jindo.$Element('stock_items'); 
+	                if (weInput && weInput.hasClass("snb_default")) { 
+	                        weInput.text(""); 
+	                        weInput.removeClass('snb_default'); 
+	                } 
+	            } 
+	        }); 
+
+		/* 통합검색  start ----->  */
+		document.domain = 'naver.com';
+		var sSearchHintText = '종목명·펀드명·환율명·원자재명 입력';
+		function itegrationSearch()
+		{
+			var query = escape(jindo.$('stock_items').value);
+			if ( query == ''  || query == escape(sSearchHintText))
+			{
+				alert ( '검색어를 입력해 주세요.' );
+				return;
+			} 
+			window.open('http://search.naver.com/search.naver?sm=sta_hty.finance&where=nexearch&query='+query,'','');
+			return false;
+		}
+					
+		function delayed_submit(object) {
+			if (navigator.userAgent.indexOf('MSIE') == -1) {
+				window.setTimeout(function() {stock_search(object)}, 300);
+			} else {
+				stock_search(object);
+			}
+			return false;
+		}
+		
+		function stock_search (object)
+		{
+			query = object.query.value.replace(/^\s*/,'').replace(/\s*$/,'');	// trim
+			object.query.value=query;
+			
+			if ( query == '' || query == sSearchHintText.replace(/^\s*/,'').replace(/\s*$/,''))
+			{
+				alert ( '검색어를 입력해 주세요.' );
+				return;
+			}
+			else {
+				object.submit();
+			}
+		}
+		/* <---------- 통합검색  end */
+		
+		function popup()
+		{
+			win = window.open('http://finance.naver.com/template/group_limit_pop.jsp','finan_popup','width=569 height=278 scrollbars=no status=no');
+			win.focus();
+		}
+	</script>
+	
+	<iframe id="me_layers" name="test" title="네이버미 영역" width="0" height="0" scrolling="no" frameborder="0" style="display:block;top: 22px; right: 209px; position: absolute; z-index: 15;"></iframe>   		
+</div>
+
+<!-- //  global include -->
+
+<script language="javascript" src="./finance_files/stocknews.js"></script>
+
+
+
+
+
+
+
+	<div id="newarea">
+		<!-- leftmenu -->
+			
+
+
+		<div class="snb snb2 snb3">
+			<h2 class="h_news"><a href="http://finance.naver.com/news/" onclick="clickcr(this, &#39;new.news&#39;, &#39;&#39;, &#39;&#39;, event)"><span class="blind">뉴스</span></a></h2>
+			<ul class="nav1">
+			<li class="frst"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2D&amp;section_id=101&amp;section_id2=258" onclick="clickcr(this, &#39;new.real&#39;, &#39;&#39;, &#39;&#39;, event)"><strong class="other2 lst_news"><span class="blind">실시간속보</span></strong></a></li> 
+            <li><a href="http://finance.naver.com/news/mainnews.nhn" onclick="clickcr(this, &#39;new.main&#39;, &#39;&#39;, &#39;&#39;, event)"><strong class="other2 lst_news2"><span class="blind">주요뉴스</span></strong></a></li>
+             
+            <li class="another"><strong class="news_focus"><span class="blind">뉴스 포커스</span></strong> 
+				<ul class="sub">
+				 <li class="lst3_1"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=401" onclick="clickcr(this, &#39;new.fore&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">시황·전망</span></a></li> 
+                 <li class="lst3_2"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=402" onclick="clickcr(this, &#39;new.firm&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">기업·종목분석</span></a></li> 
+                 <li class="lst3_3"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=403" onclick="clickcr(this, &#39;new.aboard&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">해외증시</span></a></li> 
+                 <li class="lst3_4"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=404" onclick="clickcr(this, &#39;new.bond&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">채권·선물</span></a></li> 
+                 <li class="lst3_5"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=406" onclick="clickcr(this, &#39;new.memo&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">공시·메모</span></a></li> 
+                 <li class="lst3_6"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=429" onclick="clickcr(this, &#39;new.currency&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">환율</span></a></li> 
+				</ul>
+			</li>
+			
+			<li><a href="http://finance.naver.com/news/news_list.nhn?mode=RANK" onclick="clickcr(this, &#39;new.best&#39;, &#39;&#39;, &#39;&#39;, event)"><strong class="other2 lst_news5"><span class="blind">많이 본 뉴스</span></strong></a></li> 
+            <li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSTD&amp;section_id=101&amp;section_id2=258&amp;type=1" onclick="clickcr(this, &#39;new.photo&#39;, &#39;&#39;, &#39;&#39;, event)"><strong class="other2 lst_news6"><span class="blind">포토뉴스</span></strong></a></li> 
+            <li><a href="http://finance.naver.com/news/news_list.nhn?mode=TV&amp;section_id=tv" onclick="clickcr(this, &#39;new.tv&#39;, &#39;&#39;, &#39;&#39;, event)"><strong class="other2 lst_news7"><span class="blind">TV뉴스</span></strong></a></li> 
+            <li class="another"><strong class="invest_info"><span class="blind">투자정보</span></strong> 
+				<ul class="sub">
+				<li class="lst3_7"><a href="http://finance.naver.com/news/market_notice.nhn" onclick="clickcr(this, &#39;new.info&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">공시정보</span></a></li> 
+                <li class="lst3_8"><a href="http://finance.naver.com/news/market_special.nhn" onclick="clickcr(this, &#39;new.spe&#39;, &#39;&#39;, &#39;&#39;, event)" class="off"><span class="blind">장중특징주</span></a></li> 
+				</ul>
+			</li>
+            <li><a href="http://www.seibro.or.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/company/BIP_CNTS01020V.xml&amp;menuNo=273" onclick="clickcr(this, &#39;new.sch&#39;, &#39;&#39;, &#39;&#39;, event)" target="_blank"><strong class="other2 lst_news8"><span class="blind">증시일정</span></strong></a></li>
+            <li><a href="http://finance.naver.com/news/news_search.nhn" onclick="clickcr(this, &#39;new.search&#39;, &#39;&#39;, &#39;&#39;, event)"><strong class="other2 lst_news9"><span class="blind">뉴스검색</span></strong></a></li>
+			</ul>
+			<span class="nav1_blank"></span>
+			
+			<!-- 끼워넣기 -->
+			
+				
+				
+				
+				
+			
+
+
+
+
+	<!--  여러개가 뉴스홈 배너로 등록되었을 경우에는 하나의 경우만 뿌려주게 한다. -->
+	
+		
+		
+			
+				
+				
+				
+				
+				
+			
+
+
+	
+	
+
+
+
+<div class="section_news">
+	<h4 class="subtlt">
+		
+			<a href="http://finance.naver.com/news/news_search.nhn?rcdate=&amp;q=%BF%C0%B4%C3%C0%C7+%C1%F5%BD%C3%C0%CF%C1%A4&amp;sm=title.basic&amp;pd=1&amp;stDateStart=" onclick="clickcr(this, &#39;new.todaytit&#39;, &#39;&#39;, &#39;&#39;, event)">뉴스로 보는 증시일정</a>
+			
+		
+	</h4>
+		<ul class="sub1">
+		
+			<li>
+			
+			<a href="http://finance.naver.com/news/news_search.nhn?rcdate=&amp;q=%BF%C0%B4%C3%C0%C7+%C1%F5%BD%C3%C0%CF%C1%A4&amp;sm=title.basic&amp;pd=1&amp;stDateStart=" onclick="clickcr(this, &#39;new.today&#39;, &#39;&#39;, &#39;&#39;, event)">오늘의 증시일정</a>
+			
+			
+			
+			</li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				</ul>
+			</div>
+
+		
+		
+
+
+	
+	
+	
+
+
+			<!-- //끼워넣기 -->
+		</div>
+	
+		
+
+		<!-- //leftmenu -->
+		<div id="contentarea">
+			<!-- 컨텐츠 -->
+			<!-- 상단 테두리 박스 -->
+			<div class="box_top_submain" id="newsMainTop">
+				<img src="./finance_files/blank.gif" alt="" class="rb"><img src="./finance_files/blank.gif" alt="" class="lb"><img src="./finance_files/blank.gif" alt="" class="rt"><img src="./finance_files/blank.gif" alt="" class="lt">
+				<div class="inner_area">
+					<!-- 박스 안 하얀 배경 -->
+					<!-- Today News -->
+					<div class="inner_area_left">
+						<!-- 타이틀과 시세 -->
+						<h4 class="top_tlt_news">Today News</h4>
+						<dl class="newsmain_sise">
+							<dt>코스피</dt>
+							
+								
+								
+								
+							
+								<dd class="down">1,912.53</dd>
+								<dd class="down"><span>1.69</span></dd>
+							<dt>코스닥</dt>
+							
+								
+								
+								
+							
+								<dd class="up">643.98</dd>
+								<dd class="up"><span>1.67</span></dd>
+							<dt>선물</dt>
+							
+								
+								
+								
+							
+								<dd class="down">235.25</dd>
+								<dd class="down"><span>0.75</span></dd>
+						</dl>
+						<!--// 타이틀과 시세 -->
+						<!-- 하얀배경중 왼쪽 영역 -->
+						<div class="left01">
+							<!-- 헤드라인 -->
+							<div class="headLine">
+								<h5><a href="http://finance.naver.com/news/news_read.nhn?article_id=0002802922&amp;office_id=011&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="기준금리 훌쩍 넘는 배당기업 잇달아… &quot;고배당주 관심 높일 필요&quot;" onclick="clickcr(this, &#39;nmn.head&#39;, &#39;&#39;, &#39;&#39;, event)">기준금리 훌쩍 넘는 배당기업 잇달아… "고배당주 관심 높일 필..</a></h5>
+								<div>
+									 3월 주총 앞두고 배당 공시108개 종목중 63곳 배당늘려 올 배당성향 22%까지 예상도배당수익률 1.59%로 높아져 업종별 통신 3.2%·금융 2.4%종목으론 아주캐피탈 6.22%나..<span class="date"><em>서울경제</em>2016-02-24 17:36</span>
+								</div>
+							</div>
+							<!--// 헤드라인 -->
+							<!-- 메인뉴스 -->
+							<ul class="mainNews">
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003607146&amp;office_id=014&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="신주 상장 앞둔 삼성ENG 공매도 폭탄에 나흘째 급락" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003607146&#39;, &#39;1&#39;, event)">신주 상장 앞둔 삼성ENG 공매도 폭탄에 나흘째..</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003607135&amp;office_id=014&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="코스닥 새내기株 음식료 웃고 운송부품 울어" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003607135&#39;, &#39;2&#39;, event)">코스닥 새내기株 음식료 웃고 운송부품 울어</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003687698&amp;office_id=009&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="검찰로 넘어간 엘리엇의 삼성물산 주식 파킹의혹" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003687698&#39;, &#39;3&#39;, event)">검찰로 넘어간 엘리엇의 삼성물산 주식 파킹의..</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553323&amp;office_id=015&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="주식시장 &#39;빛&#39;이 안보여…빚내서 산 주식 갚는 개미 늘었다" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003553323&#39;, &#39;4&#39;, event)">주식시장 '빛'이 안보여…빚내서 산 주식 갚는..</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003687684&amp;office_id=009&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="상장사 작년 배당금 19% 늘렸다" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003687684&#39;, &#39;5&#39;, event)">상장사 작년 배당금 19% 늘렸다</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553312&amp;office_id=015&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="중국 소비주, 한·중 외교 갈등 &#39;불똥&#39;…아모레·호텔신라·오리온 일제히 ↓" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003553312&#39;, &#39;6&#39;, event)">중국 소비주, 한·중 외교 갈등 '불똥'…아모..</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0002802916&amp;office_id=011&amp;mode=mainnews&amp;type=1&amp;date=2016-02-24" title="늘어나는 싱글족… 생수·여가 관련주 &#39;싱글벙글&#39;" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0002802916&#39;, &#39;7&#39;, event)">늘어나는 싱글족… 생수·여가 관련주 '싱글벙..</a></li>
+							
+								<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636383&amp;office_id=008&amp;mode=mainnews&amp;type=0&amp;date=2016-02-24" title="&#39;노녹인 ELS&#39; 늘어나는데… 투자 조건 잘 따져봐야" onclick="clickcr(this, &#39;nmn.list&#39;, &#39;0003636383&#39;, &#39;8&#39;, event)">'노녹인 ELS' 늘어나는데… 투자 조건 잘 따져..</a></li>
+							
+							</ul>
+							<!--// 메인뉴스 -->
+							<!-- 뉴스티커 형식일때  -->
+							<div class="mainNewsTicker" id="mainNewsTicker" style="display: block;">
+								<dl>
+									<dt>속보</dt>
+									<dd class="data">
+									
+										<span id="newsflash_0" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display: none;"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008210059&amp;office_id=001&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="옐로모바일·동양이엔피, &#39;공시위반&#39;에 과징금" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">옐로모바일·동양이엔피, '공시위반'에 과징금</a></span>
+									
+										<span id="newsflash_1" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display: none;"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0000317722&amp;office_id=366&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="증선위, 美 헤지펀드 엘리엇 5%룰 위반 혐의로 검찰 통보" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">증선위, 美 헤지펀드 엘리엇 5%룰 위반 혐의로 검찰 통보</a></span>
+									
+										<span id="newsflash_2" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display: none;"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694426&amp;office_id=277&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="증선위, 인수대상 회사 시세조종 혐의 &#39;기업인수전문가&#39; 검찰고발" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">증선위, 인수대상 회사 시세조종 혐의 '기업인수전문가' 검찰고발</a></span>
+									
+										<span id="newsflash_3" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display: none;"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636509&amp;office_id=008&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="인수회사 상폐 우려 시세조종…기업인수 전문가 검찰고발" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">인수회사 상폐 우려 시세조종…기업인수 전문가 검찰고발</a></span>
+									
+										<span id="newsflash_4" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display: none;"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0000317721&amp;office_id=366&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="증선위, 옐로모바일·동양이엔피 공시위반 과태료 부과" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">증선위, 옐로모바일·동양이엔피 공시위반 과태료 부과</a></span>
+									
+										<span id="newsflash_5" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display: none;"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008210031&amp;office_id=001&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="英 파운드화 7년 만에 최저치…1.40달러 밑으로(종합)" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">英 파운드화 7년 만에 최저치…1.40달러 밑으로(종합)</a></span>
+									
+										<span id="newsflash_6" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003486047&amp;office_id=018&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="증선위, 회계기준 위반 STX조선해양 1년간 증권발행 제한" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">증선위, 회계기준 위반 STX조선해양 1년간 증권발행 제한</a></span>
+									
+										<span id="newsflash_7" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display:none"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553543&amp;office_id=015&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="[마켓인사이트]이익내기 시작한 태양광업계" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">[마켓인사이트]이익내기 시작한 태양광업계</a></span>
+									
+										<span id="newsflash_8" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display:none"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0000439514&amp;office_id=215&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="현대증권 매각 관련 우선매수청권 행사 조건 완화" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">현대증권 매각 관련 우선매수청권 행사 조건 완화</a></span>
+									
+										<span id="newsflash_9" onmouseover="view_newsflash_pause()" onmouseout="view_newsflash_start()" style="display:none"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003486041&amp;office_id=018&amp;mode=LSS2D&amp;type=0&amp;section_id=101&amp;section_id2=258&amp;section_id3=&amp;date=20160224&amp;page=1" title="금융당국, `삼성물산 합병반대 5%룰 위반` 엘리엇 검찰통보" onclick="clickcr(this, &#39;nmn.real&#39;, &#39;&#39;, &#39;&#39;, event)">금융당국, `삼성물산 합병반대 5%룰 위반` 엘리엇 검찰통보</a></span>
+									
+									</dd>
+									<dd class="action">
+										<a href="javascript:view_newsflash(&#39;prev&#39;);" onclick="clickcr(this, &#39;nmn.left&#39;, &#39;&#39;, &#39;&#39;, event)"><img src="./finance_files/btn_roll_back2.gif" width="14" height="13" border="0" alt=""></a>
+										<a href="javascript:view_newsflash(&#39;next&#39;);" onclick="clickcr(this, &#39;nmn.right&#39;, &#39;&#39;, &#39;&#39;, event)"><img src="./finance_files/btn_roll_next2.gif" width="14" height="13" border="0" alt=""></a>
+									</dd>
+								</dl>
+							</div>
+							<!-- 뉴스티커 형식일때 -->
+							<!-- 배너형식일때 -->
+<script language="javascript">
+var banner_id = '';
+</script>
+							
+								
+								
+								
+								
+							
+
+
+
+
+							<!--// 배너형식일때 -->
+						</div>
+<script language="javascript">
+// 배너 쿠키
+var is_hide_banner = true;
+if(banner_id != '') {
+	is_hide_banner = checkHideBanner(banner_id);
+}
+
+if(is_hide_banner == true) {
+	hideMainNewsBanner();
+}
+
+
+/// 배너를 JS로 뿌려주는 것으로 바꾸고, 뿌려주는 부분에서 배너 ID를 변수에 저장해서 배어ID로 쿠키를 굽도록 수정한다.
+function hideMainNewsBanner() {
+	document.getElementById("mainNewsTicker").style.display = "block";
+	
+	if(banner_id != '') {
+		document.getElementById(banner_id).style.display = "none";
+	
+		// set cookie
+		if(is_hide_banner == false) {
+			setCookie(banner_id, "true", 1);
+		}
+	}
+}
+
+function setCookie(name, value, expire) {
+	var cookieDate = new Date();
+	cookieDate.setDate(cookieDate.getDate()+expire);
+	document.cookie = name + "=" + escape(value) + "; path=/news; expires=" + cookieDate.toGMTString()+";";
+}
+
+function removeCookie(name) {
+	setCookie(name, "", 0);
+}
+
+function checkHideBanner(name) {
+	
+	var cookie = document.cookie;
+	
+	var first = cookie.indexOf(name+"=");
+	// 쿠키가 존재하는 경우
+	if(first >= 0) {
+		var str = cookie.substring(first, cookie.length);
+		var last = str.indexOf(";");
+		
+		// 마지막 쿠키인 경우
+		if(last < 0) last = str.length;
+		
+		// 쿠키 값을 가져온다.
+		str = str.substring(0, last).split("=");
+		if(unescape(str[1]) == "true") {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return false;
+	}
+}
+</script>
+					</div>
+					<!-- //Today News -->
+					<!--// 박스 안 하얀 배경 -->
+					<!-- 박스 안 유색 배경 -->
+					<div class="inner_area_right">
+						<!-- 특징주 -->
+						<div class="specialNews">
+							<div class="titArea">
+								<img src="./finance_files/tit_newsmain_02.gif" width="33" height="11" border="0" alt="특징주">
+								<span class="more"><a href="http://finance.naver.com/news/market_special.nhn" onclick="clickcr(this, &#39;nmn.more&#39;, &#39;&#39;, &#39;&#39;, event)">더보기</a></span>
+							</div>
+							
+							
+							<span id="market_special_0" style="" onmouseover="view_market_special_pause();" onmouseout="view_market_special_start();">
+								<p class="article_subject"><a href="http://finance.naver.com/news/market_special_read.nhn?article_id=0003694112&amp;office_id=277&amp;type=0&amp;keyword=" title="동원수산, 12% 넘게 상승…흑자전환 실적 발표" onclick="clickcr(this, &#39;nmn.spn&#39;, &#39;&#39;, &#39;&#39;, event)">동원수산, 12% 넘게 상승..</a></p>
+								<dl class="module module04">
+									<dt class="title title2"><a href="http://finance.naver.com/item/main.nhn?code=030720" onclick="clickcr(this, &#39;nmn.firm&#39;, &#39;&#39;, &#39;&#39;, event)">동원수산 <span>(030720)</span></a></dt>
+									<dd class="chartStat">
+										<span class="label">현재가</span> 
+										<span class="amount"><strong>9,590</strong>원</span>
+										
+				<em class="bu_p bu_pup" style="margin:0 4px 0 0"><span class="blind">상승</span></em><span class="tah p11 red01">
+				1,040
+				</span>
+			
+									</dd>
+									<dd style="padding:4px 0px 5px 7px;">
+									<img src="./finance_files/030720.png" onerror="this.src=&#39;http://imgstock.naver.net/chart2/newschart/korea_jongmok/no_chart.png&#39;" width="165" height="113" alt="" style="display:block;">
+									</dd>
+								</dl>
+							</span>
+							
+						</div>
+						<!-- //특징주 -->
+						<!-- 종목뉴스검색 -->
+						<form name="searchFrm" method="get" action="http://finance.naver.com/news/news_search.nhn" onsubmit="return doSearch();">
+						<div class="schNews">
+							<input type="text" name="q" class="txtInput" value="종목뉴스검색" onclick="this.value=&#39;&#39;;">
+							<a onclick="clickcr(this, &#39;nmn.search&#39;, &#39;&#39;, &#39;&#39;, event)"><input type="image" src="./finance_files/btn_search_blk.gif" title="검색"></a>
+						</div>
+						</form>
+						<!-- //종목뉴스검색 -->
+					</div>
+					<!--// 박스 안 유색 배경 -->
+				</div>
+			</div>
+			<!--// 상단 테두리 박스 -->
+			<!-- 중간 컨텐츠(우측날개 제외) -->
+			<div id="contentarea_left2">
+				<!-- 카테고리별 뉴스 -->
+				<div class="main_summary clearfix">
+					<div class="summary_block">
+						<p class="tit"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=401" onclick="clickcr(this, &#39;bnw.fore&#39;, &#39;&#39;, &#39;&#39;, event)"><em>시황·</em>전망</a></p>
+						
+						
+							<div class="firstArticle">
+								<a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636493&amp;office_id=008&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" onclick="clickcr(this, &#39;bnw.foreimg&#39;, &#39;0003636493&#39;, &#39;&#39;, event)"><img src="./finance_files/3636493.jpg" alt=""></a>
+								<p class="caption"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636493&amp;office_id=008&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" title="[표]주가지수선물 시세표 - 24일" onclick="clickcr(this, &#39;bnw.foreimgtt&#39;, &#39;0003636493&#39;, &#39;&#39;, event)">[표]주가지수선물 시세. .</a></p>
+							</div>
+						
+						<ul>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008210059&amp;office_id=001&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" title="옐로모바일·동양이엔피, &#39;공시위반&#39;에 과징금" onclick="clickcr(this, &#39;bnw.forelist&#39;, &#39;0008210059&#39;, &#39;1&#39;, event)">
+								
+									옐로모바일·동양이엔피, '공시..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636509&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" title="인수회사 상폐 우려 시세조종…기업인수 전문가 검찰고발" onclick="clickcr(this, &#39;bnw.forelist&#39;, &#39;0003636509&#39;, &#39;2&#39;, event)">
+								
+									인수회사 상폐 우려 시세조종…..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636499&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" title="증선위, 허위공시 STX조선해양·나노트로닉스 제재조치" onclick="clickcr(this, &#39;bnw.forelist&#39;, &#39;0003636499&#39;, &#39;3&#39;, event)">
+								
+									증선위, 허위공시 STX조선해..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636492&amp;office_id=008&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" title="[표]미니코스피 선물 시세표 - 24일" onclick="clickcr(this, &#39;bnw.forelist&#39;, &#39;0003636492&#39;, &#39;4&#39;, event)">
+								
+									[표]미니코스피 선물 시세표 ..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636491&amp;office_id=008&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=401&amp;date=20160224&amp;page=" title="[표]주가지수선물 투자자별 매매동향 - 24일" onclick="clickcr(this, &#39;bnw.forelist&#39;, &#39;0003636491&#39;, &#39;5&#39;, event)">
+								
+									[표]주가지수선물 투자자별 매..
+									
+								
+							</a></li>
+						
+						</ul>
+					</div>
+					<div class="summary_block">
+						<p class="tit"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=402" onclick="clickcr(this, &#39;bnw.firm&#39;, &#39;&#39;, &#39;&#39;, event)"><em>기업·종목</em>분석</a></p>
+						
+						
+							<div class="firstArticle">
+								<a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636462&amp;office_id=008&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" onclick="clickcr(this, &#39;bnw.firmimg&#39;, &#39;0003636462&#39;, &#39;&#39;, event)"><img src="./finance_files/3636462.jpg" alt=""></a>
+								<p class="caption"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636462&amp;office_id=008&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" title="철광석 강세, 단단해진 철강株…포스코 20만원 넘겨" onclick="clickcr(this, &#39;bnw.firmimgtt&#39;, &#39;0003636462&#39;, &#39;&#39;, event)">철광석 강세, 단단해진. .</a></p>
+							</div>
+						
+						<ul>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553449&amp;office_id=015&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" title="나노엔텍, 의왕공장 이전해 통합 생산기지 구축" onclick="clickcr(this, &#39;bnw.firmlist&#39;, &#39;0003553449&#39;, &#39;1&#39;, event)">
+								
+									나노엔텍, 의왕공장 이전해 통..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636470&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" title="현대페인트 대표이사 최윤석→고상인 변경" onclick="clickcr(this, &#39;bnw.firmlist&#39;, &#39;0003636470&#39;, &#39;2&#39;, event)">
+								
+									현대페인트 대표이사 최윤석→고..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636449&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" title="씨에스윈드, 100억원 규모 자기주식취득 신탁계약 체결" onclick="clickcr(this, &#39;bnw.firmlist&#39;, &#39;0003636449&#39;, &#39;3&#39;, event)">
+								
+									씨에스윈드, 100억원 규모 ..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636447&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" title="한탑, 지난해 영업익 15억원…흑자전환" onclick="clickcr(this, &#39;bnw.firmlist&#39;, &#39;0003636447&#39;, &#39;4&#39;, event)">
+								
+									한탑, 지난해 영업익 15억원..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636446&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=402&amp;date=20160224&amp;page=" title="메디톡스 사상최대 매출, &#39;필러&#39; 주력제품 안착 효과" onclick="clickcr(this, &#39;bnw.firmlist&#39;, &#39;0003636446&#39;, &#39;5&#39;, event)">
+								
+									메디톡스 사상최대 매출, '필..
+									
+									
+							</a></li>
+						
+						</ul>
+					</div>
+					<div class="summary_block">
+						<p class="tit"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=403" onclick="clickcr(this, &#39;bnw.abroad&#39;, &#39;&#39;, &#39;&#39;, event)"><em>해외 </em>증시</a></p>
+						
+						
+							<div class="firstArticle">
+								<a href="http://finance.naver.com/news/news_read.nhn?article_id=0003486026&amp;office_id=018&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" onclick="clickcr(this, &#39;bnw.abroadimg&#39;, &#39;0003486026&#39;, &#39;&#39;, event)"><img src="./finance_files/3486026.jpg" alt=""></a>
+								<p class="caption"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003486026&amp;office_id=018&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" title="[표]일본 주요기업 주가(2/24)" onclick="clickcr(this, &#39;bnw.abroadimgtt&#39;, &#39;0003486026&#39;, &#39;&#39;, event)">[표]일본 주요기업 주. .</a></p>
+							</div>
+						
+						<ul>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003485987&amp;office_id=018&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" title="日증시 하락 마감..닛케이 15915.79(-0.85%)" onclick="clickcr(this, &#39;bnw.abroadlist&#39;, &#39;0003485987&#39;, &#39;1&#39;, event)">
+								
+									日증시 하락 마감..닛케이 1..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636418&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" title="유가 급락에 뉴욕 증시도 암울 지속" onclick="clickcr(this, &#39;bnw.abroadlist&#39;, &#39;0003636418&#39;, &#39;2&#39;, event)">
+								
+									유가 급락에 뉴욕 증시도 암울..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003485937&amp;office_id=018&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" title="유럽 증시 하락 출발…원자재 관련주 약세" onclick="clickcr(this, &#39;bnw.abroadlist&#39;, &#39;0003485937&#39;, &#39;3&#39;, event)">
+								
+									유럽 증시 하락 출발…원자재 ..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0000317686&amp;office_id=366&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" title="中증시 양회 기대감에 0.9% 상승…日증시는 1만6000선 붕괴" onclick="clickcr(this, &#39;bnw.abroadlist&#39;, &#39;0000317686&#39;, &#39;4&#39;, event)">
+								
+									中증시 양회 기대감에 0.9%..
+									
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636380&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=403&amp;date=20160224&amp;page=" title="유가 급락 압력에 유럽 증시 하락세…WTI 내림세 지속" onclick="clickcr(this, &#39;bnw.abroadlist&#39;, &#39;0003636380&#39;, &#39;5&#39;, event)">
+								
+									유가 급락 압력에 유럽 증시 ..
+									
+								
+							</a></li>
+						
+						</ul>
+					</div>
+					<div class="summary_block">
+						<p class="tit"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=404" onclick="clickcr(this, &#39;bnw.bond&#39;, &#39;&#39;, &#39;&#39;, event)"><em>채권·</em>선물</a></p>
+						
+						
+							<div class="firstArticle">
+								<a href="http://finance.naver.com/news/news_read.nhn?article_id=0003485979&amp;office_id=018&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" onclick="clickcr(this, &#39;bnw.bondimg&#39;, &#39;0003485979&#39;, &#39;&#39;, event)"><img src="./finance_files/3485979.jpg" alt=""></a>
+								<p class="caption"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003485979&amp;office_id=018&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" title="[표]투신권 수익증권 자금 동향 (2/22)" onclick="clickcr(this, &#39;bnw.bondimgtt&#39;, &#39;0003485979&#39;, &#39;&#39;, event)">[표]투신권 수익증권 . .</a></p>
+							</div>
+						
+						<ul>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003687690&amp;office_id=009&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" title="SC 주주제안 통한곳도 있네…경동가스 자사주 150억 산다" onclick="clickcr(this, &#39;bnw.bondlist&#39;, &#39;0003687690&#39;, &#39;1&#39;, event)">
+								
+									SC 주주제안 통한곳도 있네…..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553314&amp;office_id=015&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" title="[마켓인사이트] 한진해운, 투자자 못 찾았나…영구채 2200억 대한항공이 인수" onclick="clickcr(this, &#39;bnw.bondlist&#39;, &#39;0003553314&#39;, &#39;2&#39;, event)">
+								
+									[마켓인사이트] 한진해운, 투..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003636420&amp;office_id=008&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" title="[채권마감]유가 하락에 안전자산 선호 강화… 강세" onclick="clickcr(this, &#39;bnw.bondlist&#39;, &#39;0003636420&#39;, &#39;3&#39;, event)">
+								
+									[채권마감]유가 하락에 안전자..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008209535&amp;office_id=001&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" title="&lt;오늘의 채권&gt; 국채금리, 미국과 동조…&#39;일제히 하락&#39;" onclick="clickcr(this, &#39;bnw.bondlist&#39;, &#39;0008209535&#39;, &#39;4&#39;, event)">
+								
+									&lt;오늘의 채권&gt; 국채금리, 미..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008209454&amp;office_id=001&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=404&amp;date=20160224&amp;page=" title="IMF총재 &quot;브라질·러시아 올해 역성장…中 경착륙 피할 듯&quot;" onclick="clickcr(this, &#39;bnw.bondlist&#39;, &#39;0008209454&#39;, &#39;5&#39;, event)">
+								
+									IMF총재 "브라질·러시아 올..
+									
+									
+							</a></li>
+						
+						</ul>
+					</div>
+					<div class="summary_block">
+						<p class="tit"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=406" onclick="clickcr(this, &#39;bnw.memo&#39;, &#39;&#39;, &#39;&#39;, event)"><em>공시·</em>메모</a></p>
+						
+						
+						<ul>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003486028&amp;office_id=018&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=406&amp;date=20160224&amp;page=" title="24일 장 마감 후 주요 종목 뉴스" onclick="clickcr(this, &#39;bnw.memolist&#39;, &#39;0003486028&#39;, &#39;1&#39;, event)">
+								
+									
+									24일 장 마감 후 주요 종목 뉴스
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694389&amp;office_id=277&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=406&amp;date=20160224&amp;page=" title="경방, 보통주 1주당 1250원 현금배당" onclick="clickcr(this, &#39;bnw.memolist&#39;, &#39;0003694389&#39;, &#39;2&#39;, event)">
+								
+									
+									경방, 보통주 1주당 1250원 현금배당
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694388&amp;office_id=277&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=406&amp;date=20160224&amp;page=" title="서암기계공업, 작년 영업익 6억7300만원…전년比 31.3%↓" onclick="clickcr(this, &#39;bnw.memolist&#39;, &#39;0003694388&#39;, &#39;3&#39;, event)">
+								
+									
+									서암기계공업, 작년 영업익 6억7300만원…전..
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694385&amp;office_id=277&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=406&amp;date=20160224&amp;page=" title="GS글로벌, 자회사 차입에 324억원 규모 채무보증 결정" onclick="clickcr(this, &#39;bnw.memolist&#39;, &#39;0003694385&#39;, &#39;4&#39;, event)">
+								
+									
+									GS글로벌, 자회사 차입에 324억원 규모 채..
+								
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694383&amp;office_id=277&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=406&amp;date=20160224&amp;page=" title="해성산업, 보통주 1주당 100원 현금배당" onclick="clickcr(this, &#39;bnw.memolist&#39;, &#39;0003694383&#39;, &#39;5&#39;, event)">
+								
+									
+									해성산업, 보통주 1주당 100원 현금배당
+								
+							</a></li>
+						
+						</ul>
+					</div>
+					<div class="summary_block">
+						<p class="tit"><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS3D&amp;section_id=101&amp;section_id2=258&amp;section_id3=429" onclick="clickcr(this, &#39;bnw.currency&#39;, &#39;&#39;, &#39;&#39;, event)"><em>환율</em></a></p>
+						
+						
+							<div class="firstArticle">
+								<a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553240&amp;office_id=015&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" onclick="clickcr(this, &#39;bnw.currencyimg&#39;, &#39;0003553240&#39;, &#39;&#39;, event)"><img src="./finance_files/3553240.jpg" alt=""></a>
+								<p class="caption"><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553240&amp;office_id=015&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" title="원·엔 환율, 2년4개월만에 1100원 돌파…장중 1106.3원 급등" onclick="clickcr(this, &#39;bnw.currencyimgtt&#39;, &#39;0003553240&#39;, &#39;&#39;, event)">원·엔 환율, 2년4개. .</a></p>
+							</div>
+						
+						<ul>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008210031&amp;office_id=001&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" title="英 파운드화 7년 만에 최저치…1.40달러 밑으로(종합)" onclick="clickcr(this, &#39;bnw.currencylist&#39;, &#39;0008210031&#39;, &#39;1&#39;, event)">
+								
+									英 파운드화 7년 만에 최저치..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553095&amp;office_id=015&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" title="엔화 가치 상승세 이어져, 달러당 111엔대 다시 진입" onclick="clickcr(this, &#39;bnw.currencylist&#39;, &#39;0003553095&#39;, &#39;2&#39;, event)">
+								
+									엔화 가치 상승세 이어져, 달..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553074&amp;office_id=015&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" title="[환율마감]원·달러 환율 상승 마감…1234.4원(+3.3원)" onclick="clickcr(this, &#39;bnw.currencylist&#39;, &#39;0003553074&#39;, &#39;3&#39;, event)">
+								
+									[환율마감]원·달러 환율 상승..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553028&amp;office_id=015&amp;mode=LSS3D&amp;type=1&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" title="치솟는 원·엔 재정환율…2년4개월만에 1100원대 돌파" onclick="clickcr(this, &#39;bnw.currencylist&#39;, &#39;0003553028&#39;, &#39;4&#39;, event)">
+								
+									치솟는 원·엔 재정환율…2년4..
+									
+									
+							</a></li>
+						
+							<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003552966&amp;office_id=015&amp;mode=LSS3D&amp;type=0&amp;section_id=101&amp;section_id2=&amp;section_id3=429&amp;date=20160224&amp;page=" title="[외환 시황] 원·달러 환율 상승…1235.2원(+4.1원)" onclick="clickcr(this, &#39;bnw.currencylist&#39;, &#39;0003552966&#39;, &#39;5&#39;, event)">
+								
+									[외환 시황] 원·달러 환율 ..
+									
+									
+							</a></li>
+						
+						</ul>
+					</div>
+				</div>
+				<!--// 카테고리별 뉴스 -->
+				<!-- 언론사 리스트 -->
+				<div class="pressWrap">
+					<p class="tit">언론사별 뉴스보기</p>
+					<ul class="pressList clearfix">
+						<li class="block cols01">
+							<ul>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=032" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;032&#39;, &#39;&#39;, event)">경향신문</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=009" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;009&#39;, &#39;&#39;, event)">매일경제</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=262" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;262&#39;, &#39;&#39;, event)">신동아</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=023" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;023&#39;, &#39;&#39;, event)">조선일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=143" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;143&#39;, &#39;&#39;, event)">쿠키뉴스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=469" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;038&#39;, &#39;&#39;, event)">한국일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=055" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;055&#39;, &#39;&#39;, event)">SBS TV</a></li>															
+							</ul>
+						</li>
+						<li class="block cols03">
+							<ul>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=005" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;005&#39;, &#39;&#39;, event)">국민일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=008" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;008&#39;, &#39;&#39;, event)">머니투데이</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=277" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;277&#39;, &#39;&#39;, event)">아시아경제</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=123" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;123&#39;, &#39;&#39;, event)">조세일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=014" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;014&#39;, &#39;&#39;, event)">파이낸셜뉴스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=016" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;016&#39;, &#39;&#39;, event)">헤럴드경제</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=375" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;375&#39;, &#39;&#39;, event)">SBS CNBC</a></li>
+							</ul>
+						</li>
+						<li class="block cols02">
+							<ul>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=003" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;003&#39;, &#39;&#39;, event)">뉴시스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=021" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;021&#39;, &#39;&#39;, event)">문화일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=001" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;001&#39;, &#39;&#39;, event)">연합뉴스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=033" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;033&#39;, &#39;&#39;, event)">주간경향</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=028" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;028&#39;, &#39;&#39;, event)">한겨레</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=112" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;112&#39;, &#39;&#39;, event)">헤럴드생생뉴스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=374" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;374&#39;, &#39;&#39;, event)">SBS CNBC TV</a></li>
+							</ul>
+						</li>
+						<li class="block cols04">
+							<ul>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=020" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;020&#39;, &#39;&#39;, event)">동아일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=011" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;011&#39;, &#39;&#39;, event)">서울경제</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=018" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;018&#39;, &#39;&#39;, event)">이데일리</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=037" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;037&#39;, &#39;&#39;, event)">주간동아</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=050" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;050&#39;, &#39;&#39;, event)">한경비즈니스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=214" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;214&#39;, &#39;&#39;, event)">MBC TV</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=096" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;096&#39;, &#39;&#39;, event)">SBS</a></li>
+							</ul>
+						</li>
+						<li class="block cols05">
+							<ul>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=029" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;029&#39;, &#39;&#39;, event)">디지털타임스</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=081" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;081&#39;, &#39;&#39;, event)">서울신문</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=243" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;243&#39;, &#39;&#39;, event)">이코노미스트</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=353" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;353&#39;, &#39;&#39;, event)">중앙SUNDAY</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=015" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;015&#39;, &#39;&#39;, event)">한국경제</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=057" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;057&#39;, &#39;&#39;, event)">mbn</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=052" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;052&#39;, &#39;&#39;, event)">YTN TV</a></li>
+							</ul>
+						</li>
+						<li class="block cols06">
+							<ul>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=024" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;024&#39;, &#39;&#39;, event)">매경이코노미</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=022" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;022&#39;, &#39;&#39;, event)">세계일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=366" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;366&#39;, &#39;&#39;, event)">조선비즈</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=025" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;025&#39;, &#39;&#39;, event)">중앙일보</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=215" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;215&#39;, &#39;&#39;, event)">한국경제TV</a></li>
+								<li><a href="http://finance.naver.com/news/news_list.nhn?mode=LSS2OD&amp;section_id=101&amp;office_id=034" onclick="clickcr(this, &#39;bnw.media&#39;, &#39;034&#39;, &#39;&#39;, event)">YTN</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--// 언론사 리스트 -->
+			</div>
+			<!--// 중간 컨텐츠 -->
+			
+			<!--  right area -->
+			<div id="contentarea_right2">
+				
+
+
+	
+
+	
+		<script>document.domain='naver.com';</script>
+	
+
+
+				<!-- 우측메뉴 끼워넣기 -->
+				
+					
+					
+					
+					
+				
+
+
+
+
+	<!--  여러개가 뉴스홈 배너로 등록되었을 경우에는 하나의 경우만 뿌려주게 한다. -->
+	
+		
+		
+			
+				
+				
+				
+				
+				
+			
+
+
+
+
+				<!-- 가장 많이 본 뉴스 -->
+				<div class="box_type_r"><div class="box_type_r_top">
+					<h2 class="r_subtlt tlt_bottom_line"><img src="./finance_files/rtlt_best_news.gif" alt="가장 많이 본 뉴스" width="86" height="11"><span class="tlt_more"><a href="http://finance.naver.com/news/news_list.nhn?mode=RANK" onclick="clickcr(this, &#39;rnw.more&#39;, &#39;&#39;, &#39;&#39;, event)">더보기</a></span></h2>
+					<ul class="right_list_1_2">
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0002802922&amp;office_id=011&amp;mode=RANK&amp;typ=0" title="기준금리 훌쩍 넘는 배당기업 잇달아… &quot;고배당주 관심 높일 필요&quot;" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0002802922&#39;, &#39;1&#39;, event)">기준금리 훌쩍 넘는 배당기업 잇달아… "고배당주 관심 높일 필요"</a></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003607146&amp;office_id=014&amp;mode=RANK&amp;typ=0" title="신주 상장 앞둔 삼성ENG 공매도 폭탄에 나흘째 급락" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0003607146&#39;, &#39;2&#39;, event)">신주 상장 앞둔 삼성ENG 공매도 폭탄에 나흘째 급락</a></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694310&amp;office_id=277&amp;mode=RANK&amp;typ=0" title="[유럽개장]유럽증시 일제 하락…英 0.12%↓" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0003694310&#39;, &#39;3&#39;, event)">[유럽개장]유럽증시 일제 하락…英 0.12%↓</a></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003553323&amp;office_id=015&amp;mode=RANK&amp;typ=0" title="주식시장 &#39;빛&#39;이 안보여…빚내서 산 주식 갚는 개미 늘었다" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0003553323&#39;, &#39;4&#39;, event)">주식시장 '빛'이 안보여…빚내서 산 주식 갚는 개미 늘었다</a></li>
+	
+						<li class="division"></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003635873&amp;office_id=008&amp;mode=RANK&amp;typ=0" title="&#39;저금리+배당수익률&#39;에 연초에도 빛나는 &#39;고배당주&#39;" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0003635873&#39;, &#39;5&#39;, event)">'저금리+배당수익률'에 연초에도 빛나는 '고배당주'</a></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0008208048&amp;office_id=001&amp;mode=RANK&amp;typ=0" title="ISA &#39;묻지마 판매&#39; 어떻길래…당국 &#39;경고음&#39;" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0008208048&#39;, &#39;6&#39;, event)">ISA '묻지마 판매' 어떻길래…당국 '경고음'</a></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003694211&amp;office_id=277&amp;mode=RANK&amp;typ=0" title="[오늘의 상·하한가]VR이 끌어올린 ‘쎄니트·큐에스아이’ 상한가" onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0003694211&#39;, &#39;7&#39;, event)">[오늘의 상·하한가]VR이 끌어올린 ‘쎄니트·큐에스아이’ 상한가</a></li>
+	
+
+						<li><a href="http://finance.naver.com/news/news_read.nhn?article_id=0003607147&amp;office_id=014&amp;mode=RANK&amp;typ=0" title="13년 연속 가장 존경받는 기업에 삼성전자.. 유한양행.. 신세계백화점..." onclick="clickcr(this, &#39;rnw.list&#39;, &#39;0003607147&#39;, &#39;8&#39;, event)">13년 연속 가장 존경받는 기업에 삼성전자.. 유한양행.. 신세계백화점...</a></li>
+	
+
+					</ul>
+				</div></div>
+				<!-- //가장 많이 본 뉴스 -->
+
+		
+		
+
+
+	
+	
+	
+
+
+	<!--  여러개가 뉴스홈 배너로 등록되었을 경우에는 하나의 경우만 뿌려주게 한다. -->
+	
+		
+		
+			
+				
+				
+				
+				
+				
+			
+
+
+
+
+				<!-- 인기검색어 -->
+				<div class="box_type_r"><div class="box_type_r_top">
+					<h2 class="r_subtlt tlt_bottom_line"><img src="./finance_files/rtlt_best_keyword.gif" alt="인기검색어" width="51" height="11"><span class="tlt_more"><a href="http://finance.naver.com/sise/lastsearch2.nhn">더보기</a></span></h2>
+					<table summary="인기검색어 리스트" cellpadding="0" cellspacing="0" class="type_r1">
+					<caption>인기검색어</caption>
+					<colgroup><col width="11%"><col width="*"><col width="30%"><col width="13%">
+
+					</colgroup><tbody><tr>
+						<td class="tr" align="right"><img src="./finance_files/ico_n01.gif" alt="01" width="11" height="11"></td>
+						<td><a href="http://finance.naver.com/item/main.nhn?code=008770" class="company">호텔신라</a></td>
+						<td class="number">60,900</td>
+						<td class="tc"><img src="./finance_files/ico_down.gif" width="7" height="6" alt="하락" class="updown"></td>
+					</tr>
+
+					<tr>
+						<td class="tr" align="right"><img src="./finance_files/ico_n02.gif" alt="01" width="11" height="11"></td>
+						<td><a href="http://finance.naver.com/item/main.nhn?code=066310" class="company">큐에스아이</a></td>
+						<td class="number">9,360</td>
+						<td class="tc"><img src="./finance_files/ico_up02.gif" width="7" height="11" alt="상한" class="updown"></td>
+					</tr>
+
+					<tr>
+						<td class="tr" align="right"><img src="./finance_files/ico_n03.gif" alt="01" width="11" height="11"></td>
+						<td><a href="http://finance.naver.com/item/main.nhn?code=028050" class="company">삼성엔지니어링</a></td>
+						<td class="number">9,980</td>
+						<td class="tc"><img src="./finance_files/ico_down.gif" width="7" height="6" alt="하락" class="updown"></td>
+					</tr>
+
+					<tr>
+						<td class="tr" align="right"><img src="./finance_files/ico_n04.gif" alt="01" width="11" height="11"></td>
+						<td><a href="http://finance.naver.com/item/main.nhn?code=011690" class="company">유양디앤유</a></td>
+						<td class="number">2,305</td>
+						<td class="tc"><img src="./finance_files/ico_up02.gif" width="7" height="11" alt="상한" class="updown"></td>
+					</tr>
+
+					<tr>
+						<td class="tr" align="right"><img src="./finance_files/ico_n05.gif" alt="01" width="11" height="11"></td>
+						<td><a href="http://finance.naver.com/item/main.nhn?code=066570" class="company">LG전자</a></td>
+						<td class="number">63,500</td>
+						<td class="tc"><img src="./finance_files/ico_up.gif" width="7" height="6" alt="상승" class="updown"></td>
+					</tr>
+
+
+					</tbody></table>
+				</div></div>
+				<!-- //인기검색어 -->
+
+		
+		
+
+
+	
+	
+	
+
+
+				<!-- //우측메뉴 끼워넣기 -->
+				
+			</div>
+			<!--  //right area -->
+			<!-- //컨텐츠 -->
+			<div class="c">
+
+			</div>
+		</div>
+	</div>
+<script language="javascript">
+if (1 != 1) {
+	setTimeout('set_market_special_rolling('+ 1 +')', 10000);	
+}
+setTimeout('view_newsflash_rolling()', 3000);
+</script>
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+	<div id="footer">
+		<ul>
+			<li class="first">
+				<a href="http://www.naver.com/rules/service.html" onclick="clickcr(this, &#39;fot.service&#39;, &#39;&#39;, &#39;&#39;, event);" target="_blank">이용약관</a>
+			</li>
+			<li>
+				<a href="http://finance.naver.com/rules.nhn" onclick="clickcr(this, &#39;fot.policy&#39;, &#39;&#39;, &#39;&#39;, event);" target="_blank">금융게시판 운영원칙</a>
+			</li>
+			<li>
+				<a href="http://www.naver.com/rules/privacy.html" onclick="clickcr(this, &#39;fot.privacy&#39;, &#39;&#39;, &#39;&#39;, event);" target="_blank"><strong>개인정보취급방침</strong></a>
+			</li>
+			<li>
+				<a href="http://www.naver.com/rules/disclaimer.html" onclick="clickcr(this, &#39;fot.limit&#39;, &#39;&#39;, &#39;&#39;, event);" target="_blank">책임의 한계와 법적고지</a>
+			</li>
+			<li>
+				<a href="https://help.naver.com/support/service/main.nhn?serviceNo=745" onclick="clickcr(this, &#39;fot.help&#39;, &#39;&#39;, &#39;&#39;, event);" target="_blank">금융 고객센터</a>
+			</li>
+		</ul>
+		<p class="desc">네이버(주)에서 제공하는 금융정보는 투자 참고 사항이며, 오류가 발생할 수 있고 지연될 수 있습니다.<br>네이버(주)는 제공된 정보에 의한 투자결과에 대한 법적인 책임을 지지 않습니다. 또한 게시된 정보를 무단으로 배포할 수 없습니다.</p>
+		<address>
+			<a href="http://www.navercorp.com/" target="_blank" class="logo" onclick="clickcr(this, &#39;fot.nhn&#39;, &#39;&#39;, &#39;&#39;, event);"><img src="./finance_files/ci_naver.gif" width="63" height="11" alt="NAVER"></a>
+			<em>Copyright &#169;</em>
+			<a href="http://www.navercorp.com/" target="_blank" onclick="clickcr(this, &#39;fot.nhn&#39;, &#39;&#39;, &#39;&#39;, event);">NAVER Corp.</a>
+			<span>All Rights Reserved.</span>
+		</address>
+		
+		
+		
+	</div>
+
+
+
+<script type="text/javascript">
+function isVisible(obj) {
+    if (obj == document) return true
+ 
+    if (!obj) return false
+    if (!obj.parentNode) return false
+    if (obj.style) {
+        if (obj.style.display == 'none') return false
+        if (obj.style.visibility == 'hidden') return false
+    }
+ 
+    if (window.getComputedStyle) {
+        var style = window.getComputedStyle(obj, "")
+        if (style.display == 'none') return false
+        if (style.visibility == 'hidden') return false
+    }
+ 
+    var style = obj.currentStyle
+    if (style) {
+        if (style['display'] == 'none') return false
+        if (style['visibility'] == 'hidden') return false
+    }
+ 
+    return isVisible(obj.parentNode)
+}
+
+function isChildOf(myobj, containerObj) {
+	while(myobj != undefined) {
+		if (myobj == document.body) {
+			break;
+		} 
+		if (myobj == containerObj) {
+			return true;
+		}
+		myobj = myobj.parentElement;
+	}
+	return false;	
+}
+
+function gnbLayerClose(e){
+	var target = e.target ? e.target : e.srcElement;
+	if (isVisible(document.getElementById('gnb_service_lyr')) || isVisible(document.getElementById('gnb_notice_lyr')) ||isVisible(document.getElementById('gnb_my_lyr')) ) {
+		if (!isChildOf(target, document.getElementById('gnb'))) {
+			gnbAllLayerClose();
+		}
+	}	
+}
+
+var isIE = (navigator.userAgent.toLowerCase().indexOf("msie")!=-1 && window.document.all) ? true:false;
+if (isIE) {
+	document.attachEvent('onmousedown', gnbLayerClose);
+} else {
+	window.addEventListener('mousedown', gnbLayerClose);
+}
+</script>
+</div>
+
+</body></html>
